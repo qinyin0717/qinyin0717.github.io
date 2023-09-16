@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaysia Cuisine</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-bZb59Pvi0s4qZpYJ1po6IwE5pBpDkGuK3GwqjktX8y7SdNMD9UK7q5F4cLjmJj" crossorigin="anonymous">
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+
+        .navbar {
+            background-image: url('https://drive.google.com/uc?export=view&id=1kIOFO51HzRZ-KBdjJHP3BvobsggSiAuA');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .text-end {
+            text-align: right;
+        }
+
+        .nav-item:hover {
+            transform: translateY(-3px);
+            transition: transform 0.2s;
+        }
+
+        .navbar-toggler-icon {
+            transition: transform 0.3s;
+        }
+
+        .navbar-toggler-icon.clicked {
+            transform: rotate(90deg);
+        }
+
+        .nav-link:hover {
+            color: white !important;
+            background-color: #66ccff;
+            border: 5px solid #66ffcc;
+            padding: 4px 10px;
+            border-radius: 5px;
+        }
+
+        .nav-link {
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        footer {
+            font-family: 'Rubik', sans-serif;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            color: #333;
+
+        }
+
+
+        .footer-section {
+            position:flex;
+            flex: 1;
+            text-align: center;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 10px;
+        }
+
+        .footer-link {
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #666;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: #000;
+        }
+
+        .footer-contact a {
+            color: #0062A5;
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo-image {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .main-content {
+            flex: 1;
+            /* allows this section to expand and push the footer to the bottom */
+        }
+    </style>
+</head>
+
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="https://drive.google.com/uc?export=view&id=1fnumiE0X4BoO9uZy0iPUOlKfKoxrwrEh" alt="Logo"
+                height="50" style="margin-left: 50px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="home.html"><b>Home</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="food.html"><b>Food</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="Malaysia Festival.html"><b>Festival</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="game.html"><b>Game</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="aboutus.html"><b>About</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="contact.html"><b>Contact Us</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="main-content">
+    <input type="color" id="colorPicker">
+    <button onclick="changeBackgroundColor()"style="background-color: #007bff; border-radius: 5px; border:none;font-size: 15px;">Change Color</button>
+    
+    <script>
+        function changeBackgroundColor() {
+            var color = document.getElementById("colorPicker").value;
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+
+    <button onclick="increaseFontSize()"style="background-color: #007bff; border-radius: 5px; border:none; font-size: 15px;">Increase Font Size</button>
+    <button onclick="decreaseFontSize()"style="background-color: #007bff; border-radius: 5px; border:none; font-size: 15px;">Decrease Font Size</button>
+
+    <!--Home-->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>Malaysia Cuisine <br>A Symphony of Flavors!</h1>
+            <p>Malaysian cuisine is a diverse and flavorful blend of Malay, Chinese, Indian, Thai, Javanese, and
+                Sumatran influences. </p>
+        </div>
+
+    </section>
+    <section class="about" id="about">
+        <div class="about-text">
+            <h2>Click the Images!</h2>
+        </div>
+        <div class="image-container">
+            <img src="Malay_Foods/M1.png" alt="Sample Image 1" width="300" height="200">
+            <div class="info-box">
+                <h2>Nasi Lemak</h2>
+                <p>It's a dish that's rich in flavor and usually includes a combination of</p>
+                <p>fragrant rice, spicy sambal (chili paste), anchovies, peanuts, boiled eggs, and cucumber.</p>
+                <p>Nasi lemak has gained international recognition and is celebrated for its delicious combination</p>
+                <p>of flavors and textures. It's a dish that truly embodies the multicultural essence of Malaysia.</p>
+                <button class="close-info-button">Close</button>
+            </div>
+        </div>
+    
+        <div class="image-container">
+            <img src="Chinese_Foods/C2.png" alt="Sample Image 3" width="300" height="200">
+            <div class="info-box">
+                <h2>Dumpling</h2>
+                <p>Dumplings are a type of dish that typically consist of a filling wrapped in dough,</p>
+                <p>which is then cooked by boiling, steaming, frying, or baking.</p>
+                <p>They are a staple in many cultures around the world and come in a wide variety of shapes, sizes, and
+                    fillings.</p>
+                <button class="close-info-button">Close</button>
+            </div>
+        </div>
+    
+        <div class="image-container">
+            <img src="Indian_Foods/I2.png" alt="Sample Image 2" width="300" height="200">
+            <div class="info-box">
+                <h2>Roti Canai</h2>
+                <p>Roti canai, also known as "roti paratha," is a type of flatbread that originated</p>
+                <p>from India but is commonly enjoyed in Malaysia, Singapore, and other parts of Southeast Asia.</p>
+                <p>Roti canai is a versatile and delicious dish that has become a beloved part of the culinary landscape
+                    in</p>
+                <p>Malaysia, Singapore, and beyond. It's a great representation of the diverse and rich food culture in
+                    these regions.</p>
+                    <button class="close-info-button">Close</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        function closeInfoBox(button) {
+            var infoBox = button.parentElement;
+            infoBox.style.display = 'none';
+        }
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        // Event delegation for close buttons
+        document.addEventListener('click', function(event) {
+            if (event.target && event.target.classList.contains('close-info-button')) {
+                var infoBox = event.target.parentElement;
+                infoBox.style.display = 'none';
+            }
+        });
+
+        // Event listener for image containers
+        document.querySelectorAll('.image-container').forEach(function (container) {
+            container.addEventListener('click', function () {
+                window.scrollTo(0, 0);
+                var infoBox = this.querySelector('.info-box');
+                infoBox.style.display = (infoBox.style.display === 'none' || infoBox.style.display === '') ? 'block' : 'none';
+            });
+        });
+
+        // Event listeners for image mousemove and mouseout (if needed)
+        document.querySelectorAll('.image-container img').forEach(function (img) {
+            img.addEventListener('mousemove', function (e) {
+                let xOffset = (e.clientX / window.innerWidth - 0.5) * 50;
+                let yOffset = (e.clientY / window.innerHeight - 0.5) * 50;
+                this.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+            });
+
+                img.addEventListener('mouseout', function () {
+                    this.style.transform = 'none';
+                });
+            });
+        });
+        
+    </script>
+
+
+    <!--Foods-->
+    <section class="foods" id="foods">
+        <div class="heading">
+            <h2> Malay Foods</h2>
+        </div>
+        <!--Container-->
+        <div class="foods-container">
+            <div class="box">
+                <img src="Malay_Foods/M1.png" alt="">
+                <div class="overlay-text">Tap Me</div>
+                <h3>Nasi Lemak</h3>
+                <div class="food-info">
+                    <h2>Ingredients:</h2>
+                    <p>1. Rice: Traditionally, long-grain rice, such as fragrant jasmine rice or a local variety known
+                        as "pandan" rice, is used.</P><br>
+
+                    <p>2. Coconut Milk: This is a key component that gives nasi lemak its distinctive creamy and
+                        aromatic flavor. It's used to cook the rice.</P><br>
+
+                    <p>3. Pandan Leaves (Daun Pandan): These leaves are often tied in a knot and added to the rice while
+                        cooking to impart a subtle, fragrant aroma.</P><br>
+
+                    <p>4. Anchovies (Ikan Bilis): These are small, dried fish that are deep-fried until crispy and are
+                        commonly used as a topping.</P><br>
+
+                    <p>5. Peanuts: They are often roasted and used as a crunchy topping.</P><br>
+
+                    <p>6. Boiled Eggs: These are typically halved or quartered and served alongside the rice.</P><br>
+
+                    <p>7. Cucumber: Slices of fresh cucumber are often served as a refreshing contrast to the richness
+                        of the dish.</P><br>
+
+                    <p>8. Sambal: This is a spicy chili paste or sauce made from a mixture of chili peppers, shrimp
+                        paste, garlic, ginger, shallots, and other ingredients. It's a crucial component that provides
+                        the heat and flavor to nasi lemak.</P><br>
+                </div>
+            </div>
+            <div class="box">
+                <img src="Malay_Foods/M2.png" alt="">
+                <div class="overlay-text">Tap Me</div>
+                <h3>Satay</h3>
+                <div class="food-info">
+                    <h2>Ingredients:</h2>
+                    <p>1.Skewered Meat: This is the main component of satay. It can be chicken, beef, lamb, pork, or
+                        even seafood like prawns.</P><br>
+
+                    <p>2.Satay Marinade: A mixture of ingredients like soy sauce, ginger, garlic, lemongrass, turmeric,
+                        and other spices that imparts flavor to the meat.</p><br>
+
+                    <p>3.Peanut Sauce (Satay Sauce): This is a creamy sauce made from ground roasted peanuts, mixed with
+                        ingredients like coconut milk, soy sauce, chili, and sometimes tamarind for tanginess.</P><br>
+
+                    <p>4.Rice Cake (Lontong): In some versions of satay, the skewers are served with compressed rice
+                        cakes.</P><br>
+
+                    <p>5.Cucumber and Onions: These are common accompaniments, providing a refreshing contrast to the
+                        rich flavors.</P><br>
+                </div>
+            </div>
+            <div class="box">
+                <img src="Malay_Foods/M3.png" alt="">
+                <div class="overlay-text">Tap Me</div>
+                <h3>Kuih</h3>
+                <div class="food-info">
+                    <h2>Ingredients:</h2>
+                    <p>1.Rice Flour: A key ingredient used as a base in many kuih recipes.</P><br>
+
+                    <p>2.Coconut Milk: Provides creaminess and a rich, aromatic flavor.</P><br>
+
+                    <p>3.Palm Sugar (Gula Melaka): A traditional sweetener used in many kuih recipes.</P><br>
+
+                    <p>4.Pandan Leaves or Essence: Adds a sweet fragrance and a natural green color to certain kuih.</P>
+                    <br>
+
+                    <p>5.Glutinous Rice: Used in some kuih varieties for a sticky, chewy texture.</P><br>
+
+                    <p>6.Mung Bean Paste: Commonly used as a filling, providing a nutty and slightly sweet taste.</P>
+                    <br>
+
+                    <p>7.Tapioca Flour: Used to achieve a chewy or gelatinous texture in some kuih.</P><br>
+
+                    <p>8.Banana Leaves or Pandan Leaves (for Wrapping): Often used as natural wrappers for certain types
+                        of kuih.</P><br>
+                </div>
+            </div>
+            <div class="box">
+                <img src="Malay_Foods/M4.png" alt="">
+                <div class="overlay-text">Tap Me</div>
+                <h3>Otak-otak</h3>
+                <div class="food-info">
+                    <h2>Ingredients:</h2>
+                    <p> 1.Fish: Typically, white fish fillets like mackerel, tenggiri (Spanish mackerel), or snapper are
+                        used as the primary ingredient.</P><br>
+
+                    <p> 2.Coconut Milk: Adds creaminess and richness to the fish mixture.</P><br>
+
+                    <p> 3.Spices and Herbs: This includes ingredients like shallots, garlic, lemongrass, galangal or
+                        ginger, turmeric, and chili peppers. These are blended together to form a flavorful paste.</P>
+                    <br>
+
+                    <p> 4.Kaffir Lime Leaves: Used for their citrusy aroma and flavor.</P><br>
+
+                    <p> 5.Tapioca Flour or Cornstarch: Used as a binder to hold the mixture together.</P><br>
+
+                    <p> 6.Egg: Often added as a binding agent.</P><br>
+
+                    <p> 7.Salt and Sugar: For seasoning and balance of flavors.</P><br>
+
+                    <p> 8.Banana Leaves (for Wrapping): The mixture is typically wrapped in banana leaves before
+                        grilling, which imparts a subtle, earthy aroma to the dish.</P><br>
+
+                    <p> 9.Lime or Calamansi: Served as a garnish or for squeezing over the otak-otak before eating.</P>
+                    <br>
+
+                    <p> 10.Chili Paste (optional): Some variations include chili paste or sambal to add spiciness.</P>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="heading">
+            <h2> Indian Foods</h2>
+        </div>
+        <div class="foods-container">
+            <div class="box">
+                <img src="Indian_Foods/I1.png" alt="">
+                <div class="overlay-text">Tap Me</div>
+                <h3>Dosas</h3>
+                <div class="food-info">
+                    <h2>Ingredients:</h2>
+                    <p>1.Rice: Typically, a combination of regular rice and parboiled rice is used. This gives dosas
+                        their characteristic texture.</P><br>
+
+                    2.Urad Dal (Black Gram): Urad dal is soaked and ground to create a smooth, thick batter that helps
+                    with fermentation.</P><br>
+
+                    3.Fenugreek Seeds: These are often added to the urad dal while soaking to aid in fermentation and
+                    add flavor.</P><br>
+
+                    4.Salt: Used for seasoning the dosa batter.</P><br>
+
+                    5.Water: Used to adjust the consistency of the batter.</p><br>
+                </div>
+            </div>
+            <div class="box">
+                <img src="Indian_Foods/I2.png" alt="">
+                <div class="overlay-text">Tap Me</div>
+                <h3>Roti Canai</h3>
+                <div class="food-info">
+                    <h2>Ingredients:</h2>
+                    <P>1.All-Purpose Flour: The primary ingredient for the dough, which gives roti canai its structure.
+                    </P><br>
+
+                    2.Water: Used to form the dough by mixing it with flour.</P><br>
+
+                    3.Condensed Milk or Sugar: Added for sweetness and to enhance the flavor of the dough.</P><br>
+
+                    4.Ghee or Margarine: Used to make the dough soft and elastic. It's also applied during the folding
+                    process to create layers.</P><br>
+
+                    5.Salt: Added for seasoning</P><br>
+                </div>
+            </div>
+            <div class="box">
+                <img src="Indian_Foods/I3.png" alt="">
+                <div class="overlay-text">Tap Me</div>
+                <h3>Biryani</h3>
+                <div class="food-info">
+                    <h2>Ingredients:</h2>
+                    <p>1.Basmati Rice: This long-grain rice variety is preferred for biryani due to its distinct aroma
+                        and fluffy texture.</P><br>
+
+                    2.Meat or Vegetables: Biryani can be made with various proteins like chicken, lamb, beef, or shrimp.
+                    It can also be prepared as a vegetarian dish with vegetables or paneer.</P><br>
+
+                    3.Onions: Sliced or chopped onions are commonly used in biryani for flavor and texture.</P><br>
+
+                    4.Tomatoes: Chopped tomatoes provide acidity and a fresh taste to balance the richness of the dish.
+                    </P><br>
+
+                    5.Yogurt or Curd: Yogurt is used to marinate the meat, adding tenderness and flavor.</P><br>
+
+                    6.Ginger and Garlic Paste: These add depth of flavor to the dish.</P><br>
+
+                    7.Biryani Masala or Spice Blend: A mixture of various spices like cardamom, cinnamon, cloves, bay
+                    leaves, and others, depending on the specific biryani recipe.</P><br>
+
+                    8.Saffron or Food Coloring (optional): Used for coloring and aroma. Saffron is traditionally used
+                    for higher-end versions.</P><br>
+
+                    9.Ghee or Oil: Ghee (clarified butter) is often used for its rich flavor, but oil can be used as
+                    well.</P><br>
+
+                    10.Fresh Herbs: Coriander leaves (cilantro) and mint leaves are commonly used for garnish and
+                    flavor.</P><br>
+
+                    11.Nuts (optional): Almonds, cashews, or other nuts can be added for crunch and richness.</P><br>
+
+                    12.Raisins (optional): Used for a touch of sweetness.</P><br>
+
+                    13.Salt and Pepper: For seasoning.</P><br>
+                    </P><br>
+                </div>
+            </div>
+            <div class="box">
+                <img src="Indian_Foods/I4.png" alt="">
+                <div class="overlay-text">Tap Me</div>
+                <h3>Samosas</h3>
+                <div class="food-info">
+                    <h2>Ingredients:</h2>
+                    <p>1.Pastry Dough:</P><br>
+
+                    All-Purpose Flour: This is the main ingredient used to make the dough for the pastry shell.
+                    Water: Used to bind the flour and create a pliable dough.
+                    Oil or Ghee: Adds richness and helps create a flaky texture in the pastry.</P><br>
+                    2.Filling:</P><br>
+
+                    Potatoes: Boiled and diced or mashed, they form the base of the filling.
+                    Peas: These are commonly used in samosa fillings for added texture and flavor.
+                    Onions: Chopped onions are sautéed for flavor and aroma.
+                    Green Chilies: Provide spiciness to the filling. The quantity can be adjusted to taste.
+                    Ginger and Garlic: Minced or grated for added flavor.
+                    Spices: Common spices include cumin seeds, coriander powder, garam masala, turmeric, and red chili
+                    powder.
+                    Salt: For seasoning.
+                    Fresh Coriander Leaves: Chopped and added for freshness and flavor.</P><br>
+                    3.Oil for Frying:</P><br> Used to deep-fry the samosas until golden brown and crispy.</P><br>
+
+                    </P><br>
+
+                </div>
+            </div>
+        </div>
+        <div class="heading">
+            <h2> Chinese Foods</h2>
+        </div>
+        <div class="foods-container">
+            <div class="box">
+                <img src="Chinese_Foods/C1.png" alt="">
+                <div class="overlay-text">Tap Me</div>
+                <h3>Dim Sum</h3>
+                <div class="food-info">
+                    <h2>Ingredients:</h2>
+                    <p>1.Dough: Basic dough made from wheat flour, water, and sometimes a bit of oil, is used for
+                        wrappers and skins of various dim sum items.</P><br>
+
+                    2.Pork: Ground or minced pork is a common protein used in fillings for dumplings and buns.</P><br>
+
+                    3.Shrimp or Prawns: These are often used as a seafood option in dumplings or other dishes.</P><br>
+
+                    4.Chinese Mushrooms: Dried or fresh, these are rehydrated and finely chopped to add a deep umami
+                    flavor to fillings.</P><br>
+
+                    5.Water Chestnuts: These provide a crunchy texture and slightly sweet flavor to certain dim sum
+                    fillings.</P><br>
+
+                    6.Bamboo Shoots: Sliced or chopped, they add a crisp texture and subtle flavor.</P><br>
+
+                    7.Chives or Scallions: These are used for their fresh, onion-like flavor, and are often included in
+                    dumpling fillings.</P><br>
+
+                    8.Ginger and Garlic: Minced or finely chopped, these aromatics are used to flavor fillings and
+                    dipping sauces.</P><br>
+
+                    9.Soy Sauce: Used for seasoning and to add a savory, salty flavor to dim sum dishes.</P><br>
+
+                    10.Sesame Oil: Used for its rich, nutty flavor to enhance the taste of fillings and sauces.</P><br>
+
+                    11.Egg: Beaten eggs are sometimes used as a binder in certain fillings.</P><br>
+
+                    12.Cornstarch: Used as a thickener in sauces or as a binding agent in fillings.</P><br>
+
+                    13.Oyster Sauce: Adds depth of flavor and umami to sauces and fillings.</P><br>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="Chinese_Foods/C2.png" alt="">
+                <div class="overlay-text">Tap Me</div>
+                <h3>Dumpling</h3>
+                <div class="food-info">
+                    <h2>Ingredients:</h2>
+                    <p>1.Dough:
+                        All-Purpose Flour: The primary ingredient for making the dough.
+                        Water: Used to bind the flour and create a pliable dough.</P><br>
+                    2.Filling:
+
+                    Ground Meat: Common options include pork, chicken, beef, or shrimp. Vegetarian options might include
+                    tofu or finely chopped vegetables.
+                    Vegetables: Cabbage, carrots, scallions, and mushrooms are commonly used in dumpling fillings.
+                    Aromatics: Garlic, ginger, and sometimes green onions are used for flavor.
+                    Seasonings: Soy sauce, sesame oil, salt, and sometimes sugar and pepper are used to season the
+                    filling.</P><br>
+                    3.Wrapper Sealing:
+
+                    Water or Egg Wash: Used to moisten the edges of the wrapper for sealing.</P><br>
+                </div>
+            </div>
+            <div class="box">
+                <img src="Chinese_Foods/C3.png" alt="">
+                <div class="overlay-text">Tap Me</div>
+                <h3>Mooncakes</h3>
+                <div class="food-info">
+                    <h2>Ingredients:</h2>
+                    <p>1.For the Filling:
+
+                        Lotus Seed Paste: This is the most traditional and popular filling for mooncakes. It's made from
+                        lotus seeds, sugar, and sometimes oil.
+
+                        Red Bean Paste: Another common filling made from red azuki beans and sugar.
+
+                        Jujube Paste (Date Paste): Made from dried red dates and sugar, this filling has a sweet and
+                        slightly tangy flavor.
+
+                        Salted Egg Yolks: These are often placed in the center of the filling to provide a rich, savory
+                        contrast to the sweetness of the paste.
+
+                        Nuts: Chopped nuts like melon seeds, almonds, or walnuts may be added for texture and flavor.
+
+                        Preserved Fruits or Melon: These can be added for extra sweetness or a unique flavor.</P><br>
+
+                    2.For the Pastry Shell:
+
+                    Glutinous Rice Flour: This is the main ingredient used to make the dough for the mooncake shell.
+
+                    Golden Syrup or Lye Water: These ingredients give the pastry a glossy finish and a slightly sweet,
+                    aromatic flavor.
+
+                    Vegetable Oil or Shortening: Used to create a smooth, pliable dough.</P><br>
+
+                    3.For Glazing:
+
+                    Egg Wash: Beaten egg yolks are used to brush the surface of the mooncakes before baking, giving them
+                    a golden finish.
+                    Optional Ingredients:
+
+                    Flavorings and Spices: Depending on the recipe, ingredients like pandan leaves, rose water, or
+                    osmanthus flowers may be used for additional flavor and aroma.
+
+                    Sesame Seeds: These can be added for texture and flavor, either inside the filling or as a coating
+                    on the outside.
+
+                    Food Coloring: Used sparingly to give the mooncakes a distinctive look.
+
+                    Melon Seeds: These small seeds are sometimes added for a slight crunch in the filling.
+
+                    Keep in mind that mooncake recipes may vary based on regional preferences and personal tastes. The
+                    ingredients listed above are common components used in many traditional mooncake recipes.</P><br>
+                    </P><br>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="Chinese_Foods/C4.png" alt="">
+                <div class="overlay-text">Tap Me</div>
+                <h3>Char Kuey Teow </h3>
+                <div class="food-info">
+                    <h2>Ingredients:</h2>
+                    <p>1.Flat Rice Noodles (Kuey Teow): These wide, flat rice noodles are the main ingredient and
+                        provide the dish its distinctive texture.</P><br>
+
+                    2.Prawns: These are a common protein component of Char Kuey Teow. They are usually peeled and
+                    deveined.</P><br>
+
+                    3.Chinese Sausages (Lap Cheong): These sweet, savory sausages are often sliced and added to provide
+                    extra flavor and richness.</P><br>
+
+                    4.Bean Sprouts: These add a refreshing crunch to the dish.</P><br>
+
+                    5.Eggs: Eggs are beaten and mixed into the noodles to create a creamy texture and add protein.</P>
+                    <br>
+
+                    6.Chives or Scallions: Chopped chives or scallions are used for their fresh, onion-like flavor.</P>
+                    <br>
+
+                    7.Soy Sauce: Used for seasoning and to give the dish its signature color and flavor.</P><br>
+
+                    8.Dark Soy Sauce: This is used for both color and flavor. It's darker and richer than regular soy
+                    sauce.</P><br>
+
+                    9.Chili Paste (Sambal) or Fresh Chilies: Added for heat and spiciness. The level of spiciness can be
+                    adjusted to taste.</P><br>
+
+                    10.Garlic: Minced garlic is used for flavoring.</P><br>
+
+                    11.Vegetable Oil: Used for stir-frying the ingredients.</P><br>
+
+                    12.Lard (Optional): Traditionally, lard was used for an extra rich and flavorful dish, but you can
+                    substitute with oil.</P><br>
+                    </P><br>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Reviews-->
+    <section class="reviews" id="reviews">
+        <div class="heading">
+            <h2> Food Reviews</h2>
+        </div>
+        <!--Container-->
+        <div class="reviews-container">
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>Today's Nasi Lemak experience was nothing short of spectacular.
+                <p>The coconut-infused rice was perfectly cooked, with a subtle, delightful fragrance. </p>
+                <p>The sambal was a harmonious blend of spicy, sweet, and tangy, complemented by crunchy anchovies. </p>
+                <h2>Harith Iskander</h2>
+                <img src="img/Mp1.jpg" alt="">
+            </div>
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>The Roti Canai here is exceptional! Perfectly flaky, crispy on the outside, and wonderfully soft
+                    inside.</p>
+                <p>Paired with a fragrant dhal curry that's just the right level of spiciness.</p>
+                <p>Every bite is a heavenly delight. A must-try for any food lover!</p>
+                <h2>Jacqueline Fernandez </h2>
+                <img src="img/Ip1.jpg" alt="">
+            </div>
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>Char Kuey Teow at this place is pure magic! Wok-fried to perfection, with a medley of</p>
+                <p>succulent seafood and smoky flavors.</p>
+                <p>The balance of sweet and savory is spot-on,</p>
+                <p>making each bite a burst of satisfaction.</p>
+                <p>A true char kuey teow masterpiece.</p>
+                <p>Each bite is a symphony of taste and texture!</p>
+                <h2>Bosco Wong Chung Chak</h2>
+                <img src="img/Cp1.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <!--Favourite Food-->
+    <hr>
+    <div class="heading">
+        <h2>What is Your Favourites Malaysia Cuisine</h2>
+    </div>
+    <div class= "buttcontainer">
+        <button id="myButton">Write You Comment Here!</button>
+    </div>
+    
+
+    <script>
+        document.getElementById('myButton').addEventListener('click', function () {
+            window.location.href = 'feedback.html';
+        });
+    </script>
+
+    <script>
+
+        function getCookie(name) {
+            var value = "; " + document.cookie;
+            var parts = value.split("; " + name + "=");
+            if (parts.length == 2) return parts.pop().split(";").shift();
+        }
+
+        // Check if there is stored feedback in the cookie
+        var storedFeedback = getCookie('feedback');
+
+        if (storedFeedback) {
+            // Parse the stored feedback from JSON
+            var feedback = JSON.parse(decodeURIComponent(storedFeedback));
+
+            // Display feedback
+            var feedbackDisplay = document.getElementById('feedbackDisplay');
+            feedbackDisplay.innerHTML = `
+                <strong>Name:</strong> ${feedback.name}<br>
+                <strong>Rating:</strong> ${feedback.rating}<br>
+                <strong>Review:</strong> ${feedback.review}
+            `;
+        }
+    </script>
+
+    <div style="display: flex; justify-content: center; margin-right: 20px;">
+        <h2 style="color:black">Uplode Your Favourite Food Here!</h2>
+    </div>
+    <div style="display: flex; justify-content: center; margin-right: 20px;">
+        <input type="file" id="fileInput">
+        <button onclick="uploadFile()">Upload</button>
+    </div>
+
+    <script>
+        function uploadFile() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    const fileData = e.target.result;
+                    localStorage.setItem('uploadedFile', fileData);
+                    alert('File uploaded successfully!');
+                }
+
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1r50HTXbzlI?si=tW_xKyjlaPSBjcFu"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <button id="scrollToTopBtn" class="btn btn-primary fixed-bottom d-none">Go To Top</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="social-icons">
+        <p>Click me to Share !</p>
+        <a id="facebookShare" href="#" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a id="twitterShare" href="#" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a id="linkedinShare" href="#" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+    
+    <script>
+        const currentUrl = encodeURIComponent(window.location.href);
+        const shareText = "Check out this website! ";
+    
+        const facebookShare = document.getElementById('facebookShare');
+        facebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+    
+        const twitterShare = document.getElementById('twitterShare');
+        twitterShare.href = `https://twitter.com/intent/tweet?url=${currentUrl}&text=${shareText}`;
+    
+        const linkedinShare = document.getElementById('linkedinShare');
+        linkedinShare.href = `https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`;
+    </script>
+    
+    <div class="gcse-container">
+        <script async src="https://cse.google.com/cse.js?cx=110f7906f58f9404a">
+        </script>
+        <script>
+            (function () {
+                var cx = 'https://cse.google.com/cse.js?cx=110f7906f58f9404a';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+            })();
+        </script>
+        <gcse:search></gcse:search>
+   
+
+    <script src="script.js"></script>
+</div>
+    <footer>
+        <div class="container pt-5 border-bottom">
+            <div class="row">
+                <!-- Logo section -->
+                <div class="col-md-3 col-sm-12 footer-logo">
+                    <img src="https://drive.google.com/uc?export=view&id=1fnumiE0X4BoO9uZy0iPUOlKfKoxrwrEh"
+                        alt="Website Logo" class="logo-image">
+                    <p class="logo-description">"Malaysia: A vibrant blend of Malay, Chinese, Indian, and indigenous
+                        cultures, celebrated through festivals, cuisine, and landmarks."</p>
+                </div>
+
+                <!-- Quick Links section -->
+                <div class="col-md-3 col-sm-12 footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="home.html" class="footer-link">Home</a>
+                    <a href="food.html" class="footer-link">Foods</a>
+                    <a href="Malaysia Festival.html" class="footer-link">Festivals</a>
+                    <a href="game.html" class="footer-link">Games</a>
+                </div>
+
+                <!-- Contact section -->
+                <div class="col-md-3 col-sm-12 footer-section">
+                    <h4>Contact Us</h4>
+                    <p class="footer-contact">
+                        <strong>Email:</strong> chaizhenjie@1utar.my<br>
+                        <br>
+                        <strong>Phone:</strong> +6011-10869579
+                    </p>
+                </div>
+                <!-- Social Links section -->
+                <div class="col-md-3 col-sm-12 footer-section">
+                    <h4>Other</h4>
+                    <a href="aboutus.html" class="footer-link">About</a>
+                    <a href="contact.html" class="footer-link">Contact Us</a>
+                    <br>
+                    <br>
+
+                </div>
+            </div>
+        </div>
+            
+    </footer>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Malaysia Festival</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('Image for festival/KLCC-2a.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f7f9fc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+        }
+
+        .main-content {
+            flex: 1;
+            /* allows this section to expand and push the footer to the bottom */
+        }
+
+        .header {
+            background: #0054a6;
+            color: white;
+            padding: 10px;
+            width: 100%;
+        }
+
+        header {
+            font-size: 36px;
+        }
+
+        .image-section-container {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            margin-top: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .image-section {
+            display: flex;
+            flex-direction: column;
+            /* Display images and descriptions in a row */
+            align-items: flex-start;
+            /* Align images and descriptions to the top */
+        }
+
+        a {
+            text-decoration: none;
+            color: #0054a6;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: row;
+            /* Align image and text horizontally */
+            align-items: center;
+            /* Center image and text vertically */
+        }
+
+        a:hover {
+            transform: scale(1.1);
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+        }
+
+        .image-description {
+            color: black;
+            text-align: left;
+            /* Align description text to the left */
+            margin-left: 10px;
+            /* Add some left margin to space out the descriptions */
+        }
+
+        .image-title {
+            color: black;
+            text-align: center;
+            margin-left: 40px;
+        }
+
+        .whatsapp-share-button {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: #25D366;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+
+        .whatsapp-icon {
+            width: 32px;
+            height: auto;
+            margin: 0;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+
+        .whatsapp-icon:hover {
+            transform: scale(1.1);
+
+        }
+
+
+
+        .navbar {
+            background-image: url('https://drive.google.com/uc?export=view&id=1kIOFO51HzRZ-KBdjJHP3BvobsggSiAuA');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .text-end {
+            text-align: right;
+        }
+
+        .nav-item:hover {
+            transform: translateY(-3px);
+            transition: transform 0.2s;
+        }
+
+        .navbar-toggler-icon {
+            transition: transform 0.3s;
+        }
+
+        .navbar-toggler-icon.clicked {
+            transform: rotate(90deg);
+        }
+
+        .nav-link:hover {
+            color: white !important;
+            background-color: #66ccff;
+            border: 5px solid #66ffcc;
+            padding: 4px 10px;
+            border-radius: 5px;
+        }
+
+        .nav-link {
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand img {
+            width: auto;
+            height: 50px;
+            margin: 0;
+        }
+
+
+        footer {
+            font-family: 'Rubik', sans-serif;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            color: #333;
+
+        }
+
+
+        .footer-section {
+            flex: 1;
+            text-align: center;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 10px;
+        }
+
+        .footer-link {
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #666;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: #000;
+        }
+
+        .footer-contact a {
+            color: #0062A5;
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        footer img {
+            width: auto;
+            height: auto;
+            margin: 0;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo-image {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="https://drive.google.com/uc?export=view&id=1fnumiE0X4BoO9uZy0iPUOlKfKoxrwrEh" alt="Logo"
+                height="50" style="margin-left: 50px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="home.html"><b>Home</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="food.html"><b>Food</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="Malaysia Festival.html"><b>Festival</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="game.html"><b>Game</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="aboutus.html"><b>About</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="contact.html"><b>Contact Us</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="header">
+        <header>The Diversity of Festival in Malaysia</header>
+    </div>
+    <div class="main-content">
+        <div class="image-section-container">
+            <h3>Click on the image below to explore the diversity of Festival in Malaysia!!</h3>
+            <div class="image-section">
+                <a href="Malays festival.html">
+                    <img src="Image for festival/malays 2.jpg" alt="Malays">
+                    <p class="image-description">Malays are the majority of the ethnic groups in Malaysia. Every state
+                        has a
+                        population of Malays ranging from around 40% to over 90%, except for Sabah and Sarawak which are
+                        the
+                        only states where Malays are less than 30%. Figures given below are from the 2010 census, and
+                        2015
+                        numbers.</p>
+                </a>
+                <div class="image-title">
+                    <p>Malay</p>
+                </div>
+
+                <a href="chinese festival.html">
+                    <img src="Image for festival/chinese 2.png" alt="Chinese">
+                    <p class="image-description">The ethnic subgroups of Chinese people in Malaysia include the Hokkien,
+                        Teochew, Cantonese, Hakka, Hainan, Fuzhou and Kwongsai. Different Chinese languages are spoken
+                        in
+                        Malaysian towns and cities.</p>
+                </a>
+                <div class="image-title">
+                    <p>Chinese</p>
+                </div>
+
+                <a href="Indians festival.html">
+                    <img src="Image for festival/indians 2.jpg" alt="Indians">
+                    <p class="image-description">In Malaysia, they represent the third-largest group (constituting 6.8%
+                        of
+                        the Malaysian population), after the ethnic Malays and the Chinese. They are usually referred to
+                        simply as "Indians" in Malaysia, Orang India in Malay, "Yin du ren" in Chinese.</p>
+                </a>
+                <div class="image-title">
+                    <p>Indian</p>
+                </div>
+            </div>
+            <a href="vote form.html">
+                <button style="background-color:#333333;color:#00FF00;border-radius:5px">Click Me To Vote Your Favourite
+                    Festival</button>
+            </a>
+
+            <!-- Button to change text size -->
+            <button style="background-color:#333333;color:#00FF00;border-radius:5px; margin-top: 40px;"
+                id="increaseTextSize">Click Me To Increase Text Size</button>
+            <button style="background-color:#333333;color:#00FF00;border-radius:5px; margin-top: 40px; "
+                id="decreaseTextSize">Click Me To Decrease Text Size</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container pt-5 border-bottom">
+            <div class="row">
+                <!-- Logo section -->
+                <div class="col-md-3 col-sm-12 footer-logo">
+                    <img src="https://drive.google.com/uc?export=view&id=1fnumiE0X4BoO9uZy0iPUOlKfKoxrwrEh"
+                        alt="Website Logo" class="logo-image">
+                    <p class="logo-description">"Malaysia: A vibrant blend of Malay, Chinese, Indian, and indigenous
+                        cultures, celebrated through festivals, cuisine, and landmarks."</p>
+                </div>
+
+                <!-- Quick Links section -->
+                <div class="col-md-3 col-sm-12 footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="home.html" class="footer-link">Home</a>
+                    <a href="food.html" class="footer-link">Foods</a>
+                    <a href="Malaysia Festival.html" class="footer-link">Festivals</a>
+                    <a href="game.html" class="footer-link">Games</a>
+                </div>
+
+                <!-- Contact section -->
+                <div class="col-md-3 col-sm-12 footer-section">
+                    <h4>Contact Us</h4>
+                    <p class="footer-contact">
+                        <strong>Email:</strong> chaizhenjie@1utar.my<br>
+                        <br>
+                        <strong>Phone:</strong>+6011-10869579
+                    </p>
+                </div>
+                <!-- Social Links section -->
+                <div class="col-md-3 col-sm-12 footer-section">
+                    <h4>Other</h4>
+                    <a href="aboutus.html" class="footer-link">About</a>
+                    <a href="contact.html" class="footer-link">Contact Us</a>
+                    <br>
+                    <br>
+
+                </div>
+            </div>
+        </div>
+            
+    </footer>
+    <a href="#" id="whatsappShare" class="whatsapp-share-button">
+        <img src="https://drive.google.com/uc?export=view&id=1U8KT-KMpuhvekKx6F-Tjs66BLHfNYwhy" alt="WhatsApp"
+            class="whatsapp-icon">
+    </a>
+    <!-- jQuery (full version) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle with Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to set the text size and store it in cookies
+        function setTextSizeAndStore(size) {
+            // Set the text size
+            document.body.style.fontSize = size;
+
+            // Store the choice in cookies with SameSite=None attribute
+            document.cookie = `textSize=${size}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/; SameSite=None; Secure`;
+        }
+
+        // Button to increase text size
+        document.getElementById('increaseTextSize').addEventListener('click', function () {
+            setTextSizeAndStore('20px');
+        });
+
+        // Button to decrease text size
+        document.getElementById('decreaseTextSize').addEventListener('click', function () {
+            setTextSizeAndStore('16px');
+        });
+
+        // Function to retrieve the text size from cookies
+        function getTextSizeFromCookie() {
+            const cookies = document.cookie.split(';');
+            for (const cookie of cookies) {
+                const [name, value] = cookie.trim().split('=');
+                if (name === "textSize") {
+                    return decodeURIComponent(value);
+                }
+            }
+            return null;
+        }
+
+        // Set the text size from cookies (if available)
+        const storedTextSize = getTextSizeFromCookie();
+        if (storedTextSize) {
+            document.body.style.fontSize = storedTextSize;
+        }
+
+        const whatsappShare = document.getElementById('whatsappShare');
+        const currentUrl = encodeURIComponent(window.location.href);
+        const shareText = "Check out this website! ";
+        whatsappShare.href = `https://api.whatsapp.com/send?text=${shareText}${currentUrl}`;
+    </script>
+</body>
+
+</html>

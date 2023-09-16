@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="homestyles.css" rel="stylesheet" type="text/css">
+
+    <title>Home page</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="Logo" height="50" style="margin-left: 50px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link me-5" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5" href="food.html">Food</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5" href="Malaysia Festival.html">Festival</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5" href="game.html">Game</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5" href="aboutus.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#heroCarousel" data-bs-slide-to="1"></li>
+        </ol>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+            <!-- Hero Image Slide -->
+            <div class="carousel-item active">
+                <img src="https://media.audleytravel.com/-/media/images/home/southeast-asia/malaysia/country-guides/what-to-do-in-malaysia/istock_000023994317_cityscape_petronas_towers_kuala_lumpur.jpg?q=79&w=1920&h=640" alt="Hero Image" class="img-fluid hero-image carousel-image">
+                <div class="carousel-caption d-none d-md-block d-flex flex-column justify-content-center align-items-center"> 
+                    <h1 class="d-none d-lg-block d-xl-none display-1">Marvellous Malaysia</h1>
+                    <h1 class="d-none d-md-none d-lg-none d-xl-block display-4">Marvellous Malaysia</h1>
+                    <h3 class="d-none d-md-block">Explore the Beauty</h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://storage.googleapis.com/b2c-production/static/html/staticPages/ae/holidays/destination-malaysia/malaysia-destination-1.jpg" alt="Hero Image" class="img-fluid hero-image carousel-image">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Welcome To Malaysia</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+
+    <section class="bg-light py-5">
+        <div class="row mb-5">
+            <div class="col-md-12 text-center">
+                <p class="text-uppercase font-weight-bold text-muted">Cultural Heritage</p>
+                <h2 class="font-weight-light">Discover Our Traditions</h2>
+                <p class="lead">Dive deep into our rich cultural heritage. Explore traditional foods, games, and festivals that have stood the test of time.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-center mb-4">
+                <div class="image-container">
+                    <img src="images/homepages_images/tradition_food.png" alt="Traditional Food" class="img-fluid round mb-3" style="max-width: 300px;">
+                </div>
+                <br>
+                <h4 class="font-weight-bold">Traditional Food</h4>
+                <p>"I'm just blown away by the richness of the food culture."</p>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="image-container">
+                    <img src="images/homepages_images/tradition_games.png" alt="Traditional Game" class="img-fluid round mb-3" style="max-width: 300px;">
+                </div>
+                <br>
+                <h4 class="font-weight-bold">Traditional Games</h4>
+                <p>Relive the fun and frolic of age-old games.</p>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="image-container">
+                    <img src="images/homepages_images/tradition_festival.png" alt="Traditional Festival" class="img-fluid round mb-3" style="max-width: 300px;">
+                </div>
+                <br>
+                <h4 class="font-weight-bold">Traditional Festivals</h4>
+                <p>Celebrate the spirit and vibrancy of our festivals.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light-brown history-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>History of Malaysia</h2>
+                <p class="lead"><strong>A timeline into the rich history and heritage of Malaysia.</strong></p>
+            </div>
+            <div class="row">
+                <!-- Left Side: Image -->
+                <div class="col-md-6 col-lg-5 mb-4">
+                    <div id="historyCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="carousel-img-container">
+                                    <img src="images/homepages_images/history_image1.jpg" class="d-block w-100 rounded-4" alt="History Image 1">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-img-container">
+                                    <img src="images/homepages_images/history_image2.JPG" class="d-block w-100 rounded-4" alt="History Image 2">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-img-container">
+                                    <img src="images/homepages_images/history_image3.png" class="d-block w-100 rounded-4" alt="History Image 3">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-img-container">
+                                    <img src="images/homepages_images/history_image4.jpg" class="d-block w-100 rounded-4" alt="History Image 4">
+                                </div>
+                            </div>
+                        </div>
+                        <!--left and right control-->
+                        <a class="carousel-control-prev" type="button" data-bs-target="#historyCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" type="button" data-bs-target="#historyCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Side: Timeline -->
+                <div class="col-md-6 col-lg-7">
+                    <ul class="timeline timeline-list">
+                        <!-- Timeline Item 1 -->
+                        <li class="timeline-item ">
+                            <div class="timeline-info">
+                                <span>1973</span>
+                            </div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h6 class="timeline-title">The Alliance coalition is reorganised as the 10-party Barisan Nasional (BN)</h6>
+                            </div>
+                        </li>
+                        <!-- Timeline Item 2 -->
+                        <li class="timeline-item">
+                            <div class="timeline-info">
+                                <span>1988</span>
+                            </div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h6 class="timeline-title">The economy diversifies and GDP grows at 9 %, heralding the start of the tiger economy years.</h6>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info">
+                                <span>1997</span>
+                            </div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h6 class="timeline-title">Petronas Twin Towers completed, the world's tallest buildings at the time. The Asian economic crisis hits; currency control laws are imposed to protect the ringgit.</h6>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info">
+                                <span>2010</span>
+                            </div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h6 class="timeline-title">Government Transformation Programme aims for Malaysia to have developed nation status by 2020</h6>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info">
+                                <span>2018</span>
+                            </div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h6 class="timeline-title">Sales and Service Tax (SST) was introduced, replaced GST.</h6>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--section 2-->
+    <div class="modal fade" id="modalSubscriptionForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Subscribe</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                    <label data-error="wrong" data-success="right" for="form3">Your name</label>
+                    <i class="fas fa-user prefix grey-text"></i>
+                    <input type="text" id="form3" class="form-control validate" oninput="validateName()" required>
+                    <span id="nameValidation" class="name-validation"></span>
+                </div>
+        
+                <div class="md-form mb-4">
+                    <label data-error="wrong" data-success="right" for="form2">Your email</label>
+                    <i class="fas fa-envelope prefix grey-text"></i>
+                    <input type="email" id="form2" class="form-control validate" oninput="validateEmail()" required>
+                    <span id="emailValidation" class="email-validation"></span> <!-- This will display the validation result -->
+                </div>
+                
+        
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <span id="successMessage" style="display:none; color:green; margin-right:20px;"></span>
+                    <button class="btn btn-indigo" onclick="saveToAppropriateStorage()">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
+                </div>            
+            </div>
+        </div>
+    </div> 
+
+    <div class="subscription-section text-center">
+        <h2>Unforgettable  Malaysia's rich cultural tapestry Journey</h2>
+        <p class="description-row">Savor the flavors of traditional cuisines and immerse yourself in festive celebrations.</p>
+        <p class="description-row">Challenge yourself with age-old games and relish the intricate patterns of Malaysian culture.</p>
+        <button href="" class="btn btn-primary btn-rounded mb-4" data-toggle="modal" data-target="#modalSubscriptionForm" onclick="requestNotificationPermission()">Subscribe Now</button>
+
+    </div>
+        <!--End section 2-->
+    <br>
+    <!-- Tab navigation -->
+    <div class="text-center">
+        <h3>States In Malaysia</h3>
+    </div>
+    <div class="d-flex justify-content-center">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#selangor">Selangor</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#johor">Johor</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#penang">Penang</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#perak">Perak</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#perlis">Perlis</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#pahang">Pahang</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#kedah">Kedah</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#kelantan">Kelantan</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#melaka">Melaka</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#terengganu">Terengganu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#sembilan">Negeri Sembilan</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#sabah">Sabah</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#sarawak">Sarawak</a>
+            </li>
+        </ul>
+    </div>
+    
+     <!-- Tab content -->
+     <div class="tab-content">
+        <div class="tab-pane container active" id="selangor">
+            <div class="row">
+                <div class="col-md-7">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1019768.885496509!2d100.72004959122441!3d3.232008517422257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4252cdeb045f%3A0x26e1bee1215dfbb9!2z6Zuq5YWw6I6q!5e0!3m2!1szh-CN!2smy!4v1694478336850!5m2!1szh-CN!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-5" id="stateDetails">
+                    <h1 id="stateName">Selangor</h1><br>
+                    <h5>Cities of Selangor</h5>
+                    <strong>Capital:</strong> 
+                        <a href="#" class="city" data-city="shah_alam">Shah Alam</a>
+                    </p>
+                    <p><strong>Other Cities:</strong>
+                        <a href="#" class="city" data-city="selangor1">Petaling Jaya</a>, 
+                        <a href="#" class="city" data-city="selangor2">Subang Jaya</a>, 
+                        <a href="#" class="city" data-city="selangor3">Klang</a>
+                    </p>
+                    <div class="city-image-container">
+                        <img src="" alt="City Image" style="display: none; width: 300px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane container fade" id="johor">
+            <div class="row">
+                <div class="col-md-7">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4082952.530048286!2d100.86846768790295!3d2.0525958532056436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31c4cc3289eddb9f%3A0x7b6b329bbf0cadb4!2z5p-U5L2b!5e0!3m2!1szh-CN!2smy!4v1694478412703!5m2!1szh-CN!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-5" id="stateDetails">
+                    <h1 id="stateName">Johor</h1><br>
+                    <h5>Cities of Johor</h5>
+                    <p><strong>Capital:</strong>
+                        <a href="#" class="city" data-city="johor_bahru">Johor Bahru</a>
+                    </p>
+                    <p><strong>Other Cities:</strong> 
+                        <a href="#" class="city" data-city="batu_pahat"> Batu Pahat</a>, 
+                        <a href="#" class="city" data-city="muar"> Muar</a>, 
+                        <a href="#" class="city" data-city="kluang"> Kluang</a>
+                    </p>
+                    <div class="city-image-container">
+                        <img src="" alt="City Image" style="display: none; width: 300px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane container fade" id="penang">
+            <div class="row">
+                <div class="col-md-7">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d508468.17786885705!2d100.03335050866046!3d5.3545996224043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304a9403095390dd%3A0x29c305a5f38f633f!2z5qef5Z-O!5e0!3m2!1szh-CN!2smy!4v1694478450767!5m2!1szh-CN!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-5" id="stateDetails">
+                    <h1 id="stateName">Penang</h1><br>
+                    <h5>Cities of Penang</h5>
+                    <p><strong>Capital:</strong> 
+                        <a href="#" class="city" data-city="george_town">George Town</a>
+                    </p>
+                    <p><strong>Other Cities:</strong> 
+                        <a href="#" class="city" data-city="penang1">Butterworth</a>, 
+                        <a href="#" class="city" data-city="penang2">Bukit Mertajam</a>, 
+                        <a href="#" class="city" data-city="penang3">Tanjong Bungah</a>
+                    </p>
+                    <div class="city-image-container">
+                        <img src="" alt="City Image" style="display: none; width: 300px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane container fade" id="perak">
+            <div class="row">
+                <div class="col-md-7">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2035614.8563696758!2d99.73755886534853!3d4.802607791564373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3034b5fc2f44401d%3A0xa2d9d6f05cfe5ad2!2z6Zy56Zuz!5e0!3m2!1szh-CN!2smy!4v1694478484085!5m2!1szh-CN!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-5" id="stateDetails">
+                    <h1 id="stateName">Perak</h1><br>
+                    <h5>Cities of Perak</h5>
+                    <p><strong>Capital:</strong> 
+                        <a href="#" class="city" data-city="ipoh">Ipoh</a>
+                    </p>
+                    <p><strong>Other Cities:</strong>
+                        <a href="#" class="city" data-city="perak1">Taiping</a>, 
+                        <a href="#" class="city" data-city="perak2">Kuala Kangsar</a>, 
+                        <a href="#" class="city" data-city="perak3">Kampar</a>
+                    </p>
+                    <div class="city-image-container">
+                        <img src="" alt="City Image" style="display: none; width: 300px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane container fade" id="perlis">
+            <div class="row">
+                <div class="col-md-7">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253711.7254950175!2d100.08027682941655!3d6.490540031867264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304c7916f2d4bdf9%3A0x675ec9fc75fcfb6f!2z546755KD5biC!5e0!3m2!1szh-CN!2smy!4v1694478506624!5m2!1szh-CN!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-5" id="stateDetails">
+                    <h1 id="stateName">Perlis</h1><br>
+                    <h5>Cities of Perlis</h5>
+                    <p><strong>Capital:</strong> 
+                        <a href="#" class="city" data-city="kangar">Kangar</a>
+                    </p>
+                    <p><strong>Other Cities:</strong> 
+                        <a href="#" class="city" data-city="perlis1">Arau</a>, 
+                        <a href="#" class="city" data-city="perlis2">Kuala Perlis</a>
+                    </p>
+                    <div class="city-image-container">
+                        <img src="" alt="City Image" style="display: none; width: 300px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane container fade" id="pahang">
+            <div class="row">
+                <div class="col-md-7">
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2038045.8622815108!2d101.5638877921876!3d3.90436572755058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31c504e2889d108b%3A0x8b39eb767e5ba846!2z5b2t5Lqo!5e0!3m2!1szh-CN!2smy!4v1694478538853!5m2!1szh-CN!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-5" id="stateDetails">
+                    <h3 id="stateName">Pahang</h3><br>
+                    <h5>Cities of Pahang</h5>
+                    <p><strong>Capital:</strong> 
+                        <a href="#" class="city" data-city="kuantan">Kuantan</a>
+                    </p>
+                    <p><strong>Other Cities:</strong> 
+                        <a href="#" class="city" data-city="pahang1">Temerloh</a>, 
+                        <a href="#" class="city" data-city="pahang2">Bentong</a>, 
+                        <a href="#" class="city" data-city="pahang3">Pekan</a>
+                    </p>
+                    <div class="city-image-container">
+                        <img src="" alt="City Image" style="display: none; width: 300px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane container fade" id="kedah">
+            <div class="row">
+                <div class="col-md-7">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2032286.2791769253!2d99.05533370596685!3d5.811944315624923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304976135f4045a1%3A0x6ce483110aab4ea4!2z5ZCJ5omT!5e0!3m2!1szh-CN!2smy!4v1694478556216!5m2!1szh-CN!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-5" id="stateDetails">
+                    <h3 id="stateName">Kedah</h3><br>
+                    <h5>Cities of Kedah</h5>
+                    <p><strong>Capital:</strong> 
+                        <a href="#" class="city" data-city="alor_setar">Alor Setar</a>
+                    </p>
+                    <p><strong>Other Cities:</strong> 
+                        <a href="#" class="city" data-city="kedah1">Jitra</a>, 
+                        <a href="#" class="city" data-city="kedah2">Kulim</a>, 
+                        <a href="#" class="city" data-city="kedah3">Langkawi</a>
+                    </p>
+                    <div class="city-image-container">
+                        <img src="" alt="City Image" style="display: none; width: 300px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane container fade" id="kelantan">
+            <div class="row">
+                <div class="col-md-7">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1016870.211429109!2d101.99994694999998!3d5.394213850000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b5d97264fa1a59%3A0x6ec97bbb4a9fbcf0!2z5ZCJ5YWw5Li5!5e0!3m2!1szh-CN!2smy!4v1694478576270!5m2!1szh-CN!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-5" id="stateDetails">
+                    <h3 id="stateName">Kelantan</h3><br>
+                    <h5>Cities of Kelantan</h5>
+                    <p><strong>Capital:</strong> 
+                        <a href="#" class="city" data-city="kota_bharu">Kota Bharu</a>
+                    </p>
+                    <p><strong>Other Cities:</strong> 
+                        <a href="#" class="city" data-city="kelantan1">Pasir Mas</a>, 
+                        <a href="#" class="city" data-city="kelantan2">Tanah Merah</a>, 
+                        <a href="#" class="city" data-city="kelantan3">Tumpat</a>
+                    </p>
+                    <div class="city-image-container">
+                        <img src="" alt="City Image" style="display: none; width: 300px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane container fade" id="melaka">
+            <div class="row">
+                <div class="col-md-7">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255153.65216165042!2d102.08669361031163!3d2.2377127953814604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d1ee278e8c65dd%3A0x32a7281769e016a!2z6ams5YWt55Sy!5e0!3m2!1szh-CN!2smy!4v1694478601574!5m2!1szh-CN!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-5" id="stateDetails">
+                    <h3 id="stateName">Melaka</h3><br>
+                    <h5>Cities of Melaka</h5>
+                    <p><strong>Capital:</strong>       
+                        <a href="#" class="city" data-city="melakacity">Malacca City</a>
+                    </p>
+                    <p><strong>Other Cities:</strong> 
+                        <a href="#" class="city" data-city="melaka1">Alor Gajah</a>, 
+                        <a href="#" class="city" data-city="melaka2">Jasin</a>
+                    </p>
+                    <div class="city-image-container">
+                        <img src="" alt="City Image" style="display: none; width: 300px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane container fade" id="terengganu">
+            <div class="row">
+                <div class="col-md-7">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2035248.0877058648!2d101.71541457946094!3d4.923948629185431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b6dd7557fbd357%3A0x6a8fe5afedf2a3fe!2z55m75ZiJ5qW8!5e0!3m2!1szh-CN!2smy!4v1694478656266!5m2!1szh-CN!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-5" id="stateDetails">
+                    <h3 id="stateName">Terengganu</h3><br>
+                    <h5>Cities of Terengganu</h5>
+                    <p><strong>Capital:</strong>  
+                        <a href="#" class="city" data-city="kuala_terengganu">Kuala Terengganu</a>
+                    </p>
+                    <p><strong>Other Cities:</strong> 
+                        <a href="#" class="city" data-city="dungun">Dungun</a>, 
+                        <a href="#" class="city" data-city="marang">Marang</a>
+                    </p>
+                    <div class="city-image-container">
+                        <img src="" alt="City Image" style="display: none; width: 300px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane container fade" id="sembilan">
+            <div class="row">
+                <div class="col-md-7">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1020138.1148866041!2d101.54267475341032!3d2.8410072255018943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cde76f651dda2b%3A0x2b4e482fbc170249!2z5qOu576O5YWw!5e0!3m2!1szh-CN!2smy!4v1694478736051!5m2!1szh-CN!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-5" id="stateDetails">
+                    <h3 id="stateName">Negeri Sembilan</h3><br>
+                    <h5>Cities of Negeri Sembilan</h5>
+                    <p><strong>Capital:</strong> 
+                        <a href="#" class="city" data-city="seremban">Seremban</a>
+                    </p>
+                    <p><strong>Other Cities:</strong> 
+                        <a href="#" class="city" data-city="port_dickson">Port Dickson</a>, 
+                        <a href="#" class="city" data-city="nilai">Nilai</a>
+                    </p>
+                    <div class="city-image-container">
+                        <img src="" alt="City Image" style="display: none; width: 300px;">
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <div class="tab-pane container fade" id="sabah">
+            <div class="row">
+                <div class="col-md-7">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4065093.2415086273!2d114.66306673458645!3d5.739383930415271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32155171c8bc8a9d%3A0x889d1e436c96b307!2z5rKZ5be0!5e0!3m2!1szh-CN!2smy!4v1694478672132!5m2!1szh-CN!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-5" id="stateDetails">
+                    <h3 id="stateName">Sabah</h3><br>
+                    <h5>Cities of Sabah</h5>
+                    <p><strong>Capital:</strong> 
+                        <a href="#" class="city" data-city="kota_kinabalu">Kota Kinabalu</a>
+                    </p>
+                    <p><strong>Other Cities:</strong> 
+                        <a href="#" class="city" data-city="sandakan">Sandakan</a>, 
+                        <a href="#" class="city" data-city="tawau">Tawau</a>
+                    </p>
+                    <div class="city-image-container">
+                        <img src="" alt="City Image" style="display: none; width: 300px;">
+                    </div>
+                </div>
+            </div>                      
+        </div>
+        <div class="tab-pane container fade" id="sarawak">
+            <div class="row">
+                <div class="col-md-7">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4080277.5771712568!2d112.6082108!3d2.9177474999999955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31f62a0f014b6e47%3A0xf25aa56ec5fe1300!2z56CC5ouJ6LaK!5e0!3m2!1szh-CN!2smy!4v1694478691999!5m2!1szh-CN!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-5" id="stateDetails">
+                    <h3 id="stateName">Sarawak</h3><br>
+                    <h5>Cities of Sarawak</h5>
+                    <p><strong>Capital:</strong> 
+                        <a href="#" class="city" data-city="kuching">Kuching</a>   
+                    </p>
+                    <p><strong>Other Cities:</strong>
+                        <a href="#" class="city" data-city="sarawak1">Miri</a>, 
+                        <a href="#" class="city" data-city="sarawak2">Sibu</a>, 
+                    </p>
+                    <div class="city-image-container">
+                        <img src="" alt="City Image" style="display: none; width: 300px;">
+                    </div>
+                </div>
+            </div>                      
+        </div>
+    </div>
+
+    <section class="text-center bg-light py-5">
+        <div class="container">
+            <div class="inner cover">
+                <h1 class="cover-heading">Malaysian Culture Hub</h1>
+                <p class="lead">We a team of student at UTAR , and a freelance web developer in my spare time. We occasionally write about Traditional <a href="game.html" data-hide=".cover-wrapper" class="attractive-link">Games</a>, <a href="food.html" data-hide=".cover-wrapper" class="attractive-link">Foods</a> and a various <a href="Malaysia Festival.html" data-hide=".cover-wrapper" class="attractive-link">festivals</a>, and spend a lot of time experimenting with web technologies.</p>
+                <p>Any inquiry regarding the technical issue or questions</p>
+                <p>Please contact us as below</p>
+                <p><a href="contact.html" class="btn btn-lg btn-primary" data-hide=".cover-wrapper">Contact Us</a></p>
+            </div>
+    
+            <div class="mastfoot">
+                <div class="inner">
+                    <p>&copy; Malaysian Culture Hub [2023]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="welcomePopup" class="popup">
+        <div class="popup-content">
+          <span class="close-btn">&times;</span>
+          <h2>Welcome!</h2>
+          <p>Malaysia Culture Hub</p>
+        </div>
+    </div>
+      
+
+    <footer>
+        <div class="container pt-5 border-bottom">
+            <div class="row">
+                <!-- Logo section -->
+                <div class="col-md-3 col-sm-12 footer-logo">
+                    <img src="images/logo.png" alt="Website Logo" class="logo-image">
+                    <p class="logo-description">"Malaysia: A vibrant blend of Malay, Chinese, Indian, and indigenous cultures, celebrated through festivals, cuisine, and landmarks."</p>
+                </div>
+    
+                <!-- Quick Links section -->
+                <div class="col-md-3 col-sm-12 footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="home.html" class="footer-link">Home</a>
+                    <a href="food.html" class="footer-link">Foods</a>
+                    <a href="Malaysia Festival.html" class="footer-link">Festivals</a>
+                    <a href="game.html" class="footer-link">Games</a>
+                </div>
+    
+                <!-- Contact section -->
+                <div class="col-md-3 col-sm-12 footer-section">
+                    <h4>Contact Us</h4>
+                    <p class="footer-contact">
+                        <strong>Email:</strong> chaizhenjie@1utar.my<br>
+                        <br>
+                        <strong>Phone:</strong>+6011-10869579
+                    </p>
+                </div>
+                <!-- Social Links section -->
+                <div class="col-md-3 col-sm-12 footer-section">
+                    <h4>Other</h4>
+                    <a href="aboutus.html" class="footer-link">About</a>
+                    <a href="contact.html" class="footer-link">Contact Us</a>
+                    <br>
+                    <br>
+                    <a id="backToTop">Back to Top</a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript Bundle with Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="homescript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        // Function to handle the animation when the section is in the viewport
+        function handleSectionAnimation(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.classList.add("fade-in"); 
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }
+    
+        // Create an Intersection Observer instance
+        const sectionObserver = new IntersectionObserver(handleSectionAnimation, {
+            root: null, 
+            threshold: 0.5 
+        });
+    
+        // Target the history section and start observing it
+        const historySection = document.querySelector(".history-section");
+        if (historySection) {
+            sectionObserver.observe(historySection);
+        }
+
+        $(document).ready(function () {
+            // Function to handle the timeline animation
+            function handleTimelineAnimation() {
+                const timelineItems = document.querySelectorAll(".timeline-item");
+                timelineItems.forEach(item => {
+                    if (isElementInViewport(item)) {
+                        item.style.opacity = "1";
+                        item.classList.add("fade-in");
+                    }
+                });
+            }
+
+            // Check if an element is in the viewport
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            // Call the timeline animation function on page load
+            handleTimelineAnimation();
+
+            // Call the timeline animation function on scroll
+            window.addEventListener("scroll", handleTimelineAnimation);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    $(document).ready(function(){
+        $(".city").click(function(event) {
+            // Prevent default link behavior
+            event.preventDefault();
+
+            // Create image source based on the clicked city's data attribute
+            var cityName = $(this).data('city');
+            var imgSrc = "images/states/" + cityName + ".jpg";
+
+            // Find the closest image container and set its source
+            $(this).closest('.tab-pane').find('.city-image-container img').attr('src', imgSrc).show();
+        });
+    });
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var popup = document.getElementById("welcomePopup");
+        var closeBtn = document.querySelector(".close-btn");
+
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 10 && !popup.classList.contains("shown")) {
+                popup.style.display = "block";
+                popup.classList.add("shown");
+            }
+        });
+
+        closeBtn.addEventListener("click", function() {
+            popup.style.display = "none";
+        });
+    });
+
+    </script>
+    <script>
+        // Function to handle form submission
+        function saveToAppropriateStorage() {
+        // First, we can validate the form input
+            var name = document.getElementById("form3").value;
+            var email = document.getElementById("form2").value;
+        
+            if (!name || !email) {
+                alert("Please fill out both your name and email before submitting.");
+                return;
+            }
+
+            sessionStorage.setItem('name', name);
+            localStorage.setItem('email', email);
+        
+            // For demonstration purposes, I'm not actually saving the data to any storage.
+            // In a real-world application, you'd probably send this data to a server or save it to local storage.
+        
+            // Display a success message in the modal
+            document.getElementById("successMessage").innerText = "Subscribed successfully!";
+            document.getElementById("successMessage").style.display = "block";
+        
+            // Close the modal after a short delay (optional)
+            setTimeout(function() {
+                $('#modalSubscriptionForm').modal('hide');
+            }, 2000);
+        
+        }
+    
+    </script>
+
+</body>
+</html>

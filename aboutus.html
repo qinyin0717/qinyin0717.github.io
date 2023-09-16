@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+    
+
+    <style>
+        body {
+            background-image: url('https://drive.google.com/uc?export=view&id=1hLjOeIIi4pLLrwrenj2SpVJKvCaPe8b3');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        #googleMap {
+            width: 100%;
+            height: 400px;
+        }
+
+        .navbar {
+            background-image: url('https://drive.google.com/uc?export=view&id=1kIOFO51HzRZ-KBdjJHP3BvobsggSiAuA');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .text-end {
+            text-align: right;
+        }
+
+        .nav-item:hover {
+            transform: translateY(-3px);
+            transition: transform 0.2s;
+        }
+
+        .navbar-toggler-icon {
+            transition: transform 0.3s;
+        }
+
+        .navbar-toggler-icon.clicked {
+            transform: rotate(90deg);
+        }
+
+        .nav-link:hover {
+            color: white !important;
+            background-color: #66ccff;
+            border: 5px solid #66ffcc;
+            padding: 4px 10px;
+            border-radius: 5px;
+        }
+
+        .nav-link {
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+
+        footer {
+            font-family: 'Rubik', sans-serif;
+
+            padding: 17px 0;
+            color: #333;
+
+        }
+
+
+        .footer-section {
+            flex: 1;
+            text-align: center;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 10px;
+        }
+
+        .footer-link {
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #666;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: #000;
+        }
+
+        .footer-contact a {
+            color: #0062A5;
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo-image {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .whatsapp-share-button {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: #25D366;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .whatsapp-icon {
+            width: 32px;
+            height: auto;
+            margin: 0;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+
+        .whatsapp-icon:hover {
+            transform: scale(1.1);
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <a href="#" id="whatsappShare" class="whatsapp-share-button">
+        <img src="https://drive.google.com/uc?export=view&id=1U8KT-KMpuhvekKx6F-Tjs66BLHfNYwhy" alt="WhatsApp"
+            class="whatsapp-icon">
+    </a>
+
+
+    <div class="main-content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="https://drive.google.com/uc?export=view&id=1fnumiE0X4BoO9uZy0iPUOlKfKoxrwrEh" alt="Logo"
+                    height="50" style="margin-left: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link me-5 text-end" href="home.html"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-5 text-end" href="food.html"><b>Food</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-5 text-end" href="Malaysia Festival.html"><b>Festival</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-5 text-end" href="game.html"><b>Game</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-5 text-end" href="aboutus.html"><b>About</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-5 text-end" href="contact.html"><b>Contact Us</b></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <!-- Title -->
+            <h1 class="text-center mb-5">About</h1>
+
+            <!-- Video -->
+
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/T38uknAaxuk" frameborder="0"
+                    allowfullscreen></iframe>
+                </div>
+
+
+            
+
+
+
+            <!-- Logo and its Significance -->
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <img src="https://drive.google.com/uc?export=view&id=1fnumiE0X4BoO9uZy0iPUOlKfKoxrwrEh" alt="Logo"
+                        class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h3>Design and Significance of Logo</h3>
+                    <p>The logo of "Malaysia Cultural Hub" harmoniously blends with Malaysia's most important landmark,
+                        the Twin Towers, which captures the country's cultural development.</p>
+                    <p>The colors of the emblem are based on blue and white, with blue symbolizing the unity of the
+                        Malaysian people and white symbolizing the purity and beauty of Malaysia.</p>
+                    <p>The number "1957" represent the year of Malaysia's Independence.</p>
+                </div>
+            </div>
+
+            <!-- Accordion for Other Information -->
+            <div class="accordion" id="aboutAccordion">
+                <!-- Slogan -->
+                <div class="card">
+                    <div class="card-header" id="headingSlogan">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSlogan" aria-expanded="true" aria-controls="collapseSlogan">
+                                Slogan
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseSlogan" class="collapse" aria-labelledby="headingSlogan"
+                        data-parent="#aboutAccordion">
+                        <div class="card-body">
+                            Although we are of different racial cultures, we still respect each other and look forward
+                            to a future in our country and sharing our culture.
+                        </div>
+                    </div>
+                </div>
+                <!-- Mission -->
+                <div class="card">
+                    <div class="card-header" id="headingMission">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseMission" aria-expanded="false"
+                                aria-controls="collapseMission">
+                                Mission
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseMission" class="collapse" aria-labelledby="headingMission"
+                        data-parent="#aboutAccordion">
+                        <div class="card-body">
+                            To foster understanding, appreciation, and celebration of Malaysia's rich cultural tapestry,
+                            ensuring it remains vibrant and relevant for future generations, while positioning Malaysia
+                            as a unique cultural destination on the global stage.
+                        </div>
+                    </div>
+                </div>
+                <!-- Objectives -->
+                <div class="card">
+                    <div class="card-header" id="headingObjectives">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseObjectives" aria-expanded="false"
+                                aria-controls="collapseObjectives">
+                                Objectives
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseObjectives" class="collapse" aria-labelledby="headingObjectives"
+                        data-parent="#aboutAccordion">
+                        <div class="card-body">
+                            <ol>
+                                <li>Tourism Enhancement: Showcase Malaysia's cultural diversity to attract tourists and
+                                    boost the economy. Organize cultural festivals and events that cater to both locals
+                                    and tourists, offering immersive experiences.</li>
+                                <li>Community Engagement: Organize intercultural exchange programs to foster
+                                    understanding and harmony among various communities.</li>
+                                <li>Global Positioning: Engage in cultural exchange programs with other countries to
+                                    showcase Malaysia's culture and learn from others.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- Map Section -->
+                <div class="card mb-5">
+                    <div class="card-header" id="headingMap">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseMap" aria-expanded="true" aria-controls="collapseMap">
+                                Map for Cities of Malaysia
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseMap" class="collapse" aria-labelledby="headingMap" data-parent="#aboutAccordion">
+                        <div class="card-body">
+                            <div class="row align-items-center h-100">
+                                <!-- Map Column -->
+                                <div class="col-md-8 mr-md-5">
+                                    <div id="googleMap" class="mx-auto"></div>
+                                </div>
+
+                                <!-- Dropdowns Column -->
+                                <div class="col-md-3 ml-md-5">
+                                    <br>
+                                    <select id="stateSelector" class="mb-3 w-100">
+                                        <option value="">Select a state</option>
+                                    </select>
+
+                                    <select id="citySelector" class="mb-3 w-100">
+                                        <option value="">Select a city</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <div class="container pt-5 border-bottom">
+                <div class="row">
+                    <!-- Logo section -->
+                    <div class="col-md-3 col-sm-12 footer-logo">
+                        <img src="https://drive.google.com/uc?export=view&id=1fnumiE0X4BoO9uZy0iPUOlKfKoxrwrEh"
+                            alt="Website Logo" class="logo-image">
+                        <p class="logo-description">"Malaysia: A vibrant blend of Malay, Chinese, Indian, and indigenous
+                            cultures, celebrated through festivals, cuisine, and landmarks."</p>
+                    </div>
+        
+                    <!-- Quick Links section -->
+                    <div class="col-md-3 col-sm-12 footer-section">
+                        <h4>Quick Links</h4>
+                        <a href="home.html" class="footer-link">Home</a>
+                        <a href="food.html" class="footer-link">Foods</a>
+                        <a href="Malaysia Festival.html" class="footer-link">Festivals</a>
+                        <a href="game.html" class="footer-link">Games</a>
+                    </div>
+        
+                    <!-- Contact section -->
+                    <div class="col-md-3 col-sm-12 footer-section">
+                        <h4>Contact Us</h4>
+                        <p class="footer-contact">
+                            <strong>Email:</strong> chaizhenjie@1utar.my<br>
+                            <br>
+                            <strong>Phone:</strong>+6011-10869579
+                        </p>
+                    </div>
+                    <!-- Social Links section -->
+                    <div class="col-md-3 col-sm-12 footer-section">
+                        <h4>Other</h4>
+                        <a href="aboutus.html" class="footer-link">About</a>
+                        <a href="contact.html" class="footer-link">Contact Us</a>
+                        <br>
+                        <br>
+        
+                    </div>
+                </div>
+            </div>
+                
+        </footer>
+        
+        <!-- Scripts -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+        <!-- Script for the map -->
+        <script>
+
+            var statesAndCities = {
+                "Johor": ["Johor Bahru", "Batu Pahat", "Muar", "Kluang"],
+                "Kedah": ["Alor Setar", "Sungai Petani", "Kulim", "Langkawi"],
+                "Kelantan": ["Kota Bharu", "Pasir Mas", "Tanah Merah", "Tumpat"],
+                "Malacca": ["Malacca City", "Alor Gajah", "Jasin"],
+                "Negeri Sembilan": ["Seremban", "Port Dickson", "Nilai"],
+                "Pahang": ["Kuantan", "Temerloh", "Bentong"],
+                "Perak": ["Ipoh", "Taiping", "Kuala Kangsar", "Kampar"],
+                "Perlis": ["Kangar", "Arau", "Kuala Perlis"],
+                "Penang": ["George Town", "Butterworth", "Bukit Mertajam", "Tanjong Bungah"],
+                "Sabah": ["Kota Kinabalu", "Sandakan", "Tawau"],
+                "Sarawak": ["Kuching", "Miri", "Sibu"],
+                "Selangor": ["Shah Alam", "Petaling Jaya", "Subang Jaya", "Klang"],
+                "Terengganu": ["Kuala Terengganu", "Kemaman", "Dungun", "Marang"]
+            };
+
+            var cityCoordinates = {
+                // Johor
+                "Johor Bahru": { lat: 1.4927, lng: 103.7414 },
+                "Batu Pahat": { lat: 1.8520, lng: 102.9279 },
+                "Muar": { lat: 2.0442, lng: 102.5689 },
+                "Kluang": { lat: 2.0304, lng: 103.3169 },
+
+                // Kedah
+                "Alor Setar": { lat: 6.1239, lng: 100.3677 },
+                "Sungai Petani": { lat: 5.6437, lng: 100.4914 },
+                "Kulim": { lat: 5.3645, lng: 100.5618 },
+                "Langkawi": { lat: 6.3500, lng: 99.8000 },
+
+                // Kelantan
+                "Kota Bharu": { lat: 6.1250, lng: 102.2381 },
+                "Pasir Mas": { lat: 6.0412, lng: 102.1412 },
+                "Tanah Merah": { lat: 5.8004, lng: 102.1455 },
+                "Tumpat": { lat: 6.1978, lng: 102.1704 },
+
+                // Malacca (Melaka)
+                "Malacca City": { lat: 2.1896, lng: 102.2501 },
+                "Alor Gajah": { lat: 2.3819, lng: 102.2089 },
+                "Jasin": { lat: 2.3118, lng: 102.3204 },
+
+                // Negeri Sembilan
+                "Seremban": { lat: 2.7258, lng: 101.9424 },
+                "Port Dickson": { lat: 2.5228, lng: 101.7964 },
+                "Nilai": { lat: 2.7994, lng: 101.7932 },
+
+                // Pahang
+                "Kuantan": { lat: 3.8196, lng: 103.3292 },
+                "Temerloh": { lat: 3.4489, lng: 102.4176 },
+                "Bentong": { lat: 3.5228, lng: 101.9069 },
+
+                // Perak
+                "Ipoh": { lat: 4.5975, lng: 101.0901 },
+                "Taiping": { lat: 4.8535, lng: 100.7372 },
+                "Kuala Kangsar": { lat: 4.7720, lng: 100.9372 },
+                "Kampar": { lat: 4.3135, lng: 101.1494 },
+
+                // Perlis
+                "Kangar": { lat: 6.4412, lng: 100.1986 },
+                "Arau": { lat: 6.4298, lng: 100.2687 },
+                "Kuala Perlis": { lat: 6.3871, lng: 100.1372 },
+
+                // Penang
+                "George Town": { lat: 5.4149, lng: 100.3308 },
+                "Butterworth": { lat: 5.3971, lng: 100.3659 },
+                "Bukit Mertajam": { lat: 5.3655, lng: 100.4574 },
+                "Tanjong Bungah": { lat: 5.4667, lng: 100.2769 },
+
+                // Sabah
+                "Kota Kinabalu": { lat: 5.9804, lng: 116.0735 },
+                "Sandakan": { lat: 5.8390, lng: 118.1173 },
+                "Tawau": { lat: 4.2443, lng: 117.8912 },
+
+                // Sarawak
+                "Kuching": { lat: 1.5600, lng: 110.3450 },
+                "Miri": { lat: 4.3995, lng: 113.9914 },
+                "Sibu": { lat: 2.2876, lng: 111.8300 },
+
+                // Selangor
+                "Shah Alam": { lat: 3.0733, lng: 101.5185 },
+                "Petaling Jaya": { lat: 3.1279, lng: 101.5958 },
+                "Subang Jaya": { lat: 3.0568, lng: 101.5852 },
+                "Klang": { lat: 3.0449, lng: 101.4456 },
+
+                // Terengganu
+                "Kuala Terengganu": { lat: 5.3117, lng: 103.1324 },
+                "Kemaman": { lat: 4.2315, lng: 103.4215 },
+                "Dungun": { lat: 4.7682, lng: 103.4044 },
+                "Marang": { lat: 5.2055, lng: 103.2059 }
+            };
+
+
+
+            var map = L.map('googleMap').setView([4.2105, 101.9758], 6);  // Set the default view to Malaysia
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+
+            var currentMarker;
+
+            // Populate the states dropdown
+            var stateDropdown = document.getElementById("stateSelector");
+            for (var state in statesAndCities) {
+                var option = document.createElement("option");
+                option.text = state;
+                option.value = state;
+                stateDropdown.add(option);
+            }
+
+            // Listener to populate cities dropdown based on selected state
+            stateDropdown.addEventListener("change", function () {
+                var selectedState = this.value;
+                var cityDropdown = document.getElementById("citySelector");
+                cityDropdown.innerHTML = "<option value=''>Select a city</option>";  // Clear previous cities
+
+                statesAndCities[selectedState].forEach(function (city) {
+                    var option = document.createElement("option");
+                    option.text = city;
+                    option.value = city;
+                    cityDropdown.add(option);
+                });
+            });
+
+            // Listener to update the map based on selected city
+            document.getElementById("citySelector").addEventListener("change", function () {
+                var selectedCity = this.value;
+                var cityCoords = [cityCoordinates[selectedCity].lat, cityCoordinates[selectedCity].lng];
+
+                if (currentMarker) {
+                    map.removeLayer(currentMarker);
+                }
+
+                currentMarker = L.marker(cityCoords).addTo(map);
+                map.setView(cityCoords, 10);
+                currentMarker.bindPopup(selectedCity).openPopup();
+            });
+
+
+            // Update the WhatsApp share link with the current page URL
+            const whatsappShare = document.getElementById('whatsappShare');
+            const currentUrl = encodeURIComponent(window.location.href);
+            const shareText = "Check out this website! ";
+            whatsappShare.href = `https://api.whatsapp.com/send?text=${shareText}${currentUrl}`;
+
+        </script>
+
+</body>
+
+</html>

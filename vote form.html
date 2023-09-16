@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Vote Your Favorite Festival</title>
+    <style>
+        body {
+            background-image: url('Image for festival/KLCC-2a.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .main-content {
+            flex: 1;
+            /* allows this section to expand and push the footer to the bottom */
+        }
+
+
+        /* Style for the transparent container */
+        .transparent-container {
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+            padding: 60px;
+            border-radius: 10px;
+        }
+
+        /* Center-align form and contents */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .btn-primary {
+            margin-top: 20px;
+        }
+
+        h1, h4 {
+            font-size: 24px;
+        }
+
+        #festivalSelect {
+            width: 450px;
+            text-align: center;
+        }
+
+        #ethnicGroup {
+            width: 450px;
+            text-align: center;
+        }
+
+        #thankYouMessage {
+            display: none;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .navbar {
+            background-image: url('https://drive.google.com/uc?export=view&id=1kIOFO51HzRZ-KBdjJHP3BvobsggSiAuA');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .text-end {
+            text-align: right;
+        }
+
+        .nav-item:hover {
+            transform: translateY(-3px);
+            transition: transform 0.2s;
+        }
+
+        .navbar-toggler-icon {
+            transition: transform 0.3s;
+        }
+
+        .navbar-toggler-icon.clicked {
+            transform: rotate(90deg);
+        }
+
+        .nav-link:hover {
+            color: white !important;
+            background-color: #66ccff;
+            border: 5px solid #66ffcc;
+            padding: 4px 10px;
+            border-radius: 5px;
+        }
+
+        .nav-link {
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        footer {
+            font-family: 'Rubik', sans-serif;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            color: #333;
+
+        }
+
+
+        .footer-section {
+            flex: 1;
+            text-align: center;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 10px;
+        }
+
+        .footer-link {
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #666;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: #000;
+        }
+
+        .footer-contact a {
+            color: #0062A5;
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo-image {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="https://drive.google.com/uc?export=view&id=1fnumiE0X4BoO9uZy0iPUOlKfKoxrwrEh" alt="Logo"
+                height="50" style="margin-left: 50px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="home.html"><b>Home</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="food.html"><b>Food</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="Malaysia Festival.html"><b>Festival</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="game.html"><b>Game</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="aboutus.html"><b>About</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="contact.html"><b>Contact Us</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-content">
+    <div class="container">
+        <div class="transparent-container">
+            <h1>Vote Your Favorite Festival</h1>
+            <form id="festivalForm">
+                <h5>Select From These Three Ethnic Groups:</h5>
+                <select id="ethnicGroup" class="form-control mb-3 custom-select" onchange="updateFestivalOptions()" required>
+                    <option value="none">--Select--</option>
+                    <option value="Malay">Malay</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="Indian">Indian</option>
+                </select>
+                <h5>Select your favourite festival:</h5>
+                <select id="festivalSelect" class="form-control custom-select" required>
+                    <option value="none">--Select--</option>
+                </select>
+
+                <div id="festivalDisplay" class="mt-5" style="display: none;">
+                    <option value="none"><h4>--Select--</h4></option>
+                </div>
+
+                <div id="thankYouMessage">
+                    Thanks For Your Vote!!
+                </div>
+
+                <div class="button">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+            <a href="Malaysia Festival.html">
+                <button style="background-color:#333333; color:#00FF00; border-radius:5px; transition: background-color 0.3s, color 0.3s;margin-top: 30px;">Click Me To Go Back Previous Pages</button>
+            </a>
+        </div>
+    </div>
+</div>
+    <footer>
+        <div class="container pt-5 border-bottom">
+            <div class="row">
+                <!-- Logo section -->
+                <div class="col-md-3 col-sm-12 footer-logo">
+                    <img src="https://drive.google.com/uc?export=view&id=1fnumiE0X4BoO9uZy0iPUOlKfKoxrwrEh"
+                        alt="Website Logo" class="logo-image">
+                    <p class="logo-description">"Malaysia: A vibrant blend of Malay, Chinese, Indian, and indigenous
+                        cultures, celebrated through festivals, cuisine, and landmarks."</p>
+                </div>
+
+                <!-- Quick Links section -->
+                <div class="col-md-3 col-sm-12 footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="home.html" class="footer-link">Home</a>
+                    <a href="food.html" class="footer-link">Foods</a>
+                    <a href="Malaysia Festival.html" class="footer-link">Festivals</a>
+                    <a href="game.html" class="footer-link">Games</a>
+                </div>
+
+                <!-- Contact section -->
+                <div class="col-md-3 col-sm-12 footer-section">
+                    <h4>Contact Us</h4>
+                    <p class="footer-contact">
+                        <strong>Email:</strong> chaizhenjie@1utar.my<br>
+                        <br>
+                        <strong>Phone:</strong> +6011-10869579
+                    </p>
+                </div>
+                <!-- Social Links section -->
+                <div class="col-md-3 col-sm-12 footer-section">
+                    <h4>Other</h4>
+                    <a href="aboutus.html" class="footer-link">About</a>
+                    <a href="contact.html" class="footer-link">Contact Us</a>
+                    <br>
+                    <br>
+
+                </div>
+            </div>
+        </div>
+            
+    </footer>
+    <!-- jQuery (full version) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle with Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Check if the user has already voted
+        if (localStorage.getItem("hasVoted")) {
+            document.getElementById("festivalForm").style.display = "none";
+            document.getElementById("thankYouMessage").style.display = "block";
+            // Change the text inside the h1 element
+            document.querySelector("h1").textContent = "Thanks For Your Vote!!";
+
+            // Show alert message
+            var selectedEthnicGroup = localStorage.getItem("selectedEthnicGroup");
+            var selectedFestival = localStorage.getItem("selectedFestival");
+            alert("You have already voted!\n\nEthnic Group: " + selectedEthnicGroup + "\nFavorite Festival: " + selectedFestival);
+        }
+
+        // Initialize the second select with empty options
+        var festivalSelect = document.getElementById("festivalSelect");
+        festivalSelect.innerHTML = '<option value="none">--Select--</option>';
+
+        function updateFestivalOptions() {
+            // Get the selected ethnic group from the first select
+            var ethnicGroupSelect = document.getElementById("ethnicGroup");
+            var selectedEthnicGroup = ethnicGroupSelect.value;
+
+            // Clear existing options
+            festivalSelect.innerHTML = '<option value="none">--Select--</option>';
+
+            // Populate options based on the selected ethnic group
+            if (selectedEthnicGroup === "Malay") {
+                var malayFestivals = ["Hari Raya Adilfitri", "Hari Raya Puasa", "Awal Muharram"];
+                for (var i = 0; i < malayFestivals.length; i++) {
+                    var option = document.createElement("option");
+                    option.value = malayFestivals[i];
+                    option.text = malayFestivals[i];
+                    festivalSelect.appendChild(option);
+                }
+            } else if (selectedEthnicGroup === "Chinese") {
+                var chineseFestivals = ["Chinese New Year", "Dongzhi Festival", "Mooncake Festival"];
+                for (var i = 0; i < chineseFestivals.length; i++) {
+                    var option = document.createElement("option");
+                    option.value = chineseFestivals[i];
+                    option.text = chineseFestivals[i];
+                    festivalSelect.appendChild(option);
+                }
+            } else if (selectedEthnicGroup === "Indian") {
+                var indianFestivals = ["Deepavali", "Thaipusam", "Navaratri (Durga festival)"];
+                for (var i = 0; i < indianFestivals.length; i++) {
+                    var option = document.createElement("option");
+                    option.value = indianFestivals[i];
+                    option.text = indianFestivals[i];
+                    festivalSelect.appendChild(option);
+                }
+            }
+
+            // Display the festival select element
+            festivalSelect.style.display = "block";
+        }
+
+        // Handle form submission
+        document.getElementById("festivalForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Get selected values from the form
+            var selectedEthnicGroup = document.getElementById("ethnicGroup").value;
+            var selectedFestival = document.getElementById("festivalSelect").value;
+
+            // Check if the user has made valid selections
+            if (selectedEthnicGroup === "none" || selectedFestival === "none") {
+                // Display a notification to the user
+                alert("Please select both an ethnic group and a favourite festival.");
+                return; // Exit the function and prevent form submission
+            }
+
+            // Check if the user has already voted
+            if (localStorage.getItem("hasVoted")) {
+                // Display a notification on the page
+                document.getElementById("thankYouMessage").style.display = "block";
+                // Change the text inside the h1 element
+                document.querySelector("h1").textContent = "Thanks For Your Vote";
+
+                // Show alert message
+                alert("You have already voted!\n\nEthnic Group: " + selectedEthnicGroup + "\nFavorite Festival: " + selectedFestival);
+            } else {
+                // Store the selected options in local storage
+                localStorage.setItem("selectedEthnicGroup", selectedEthnicGroup);
+                localStorage.setItem("selectedFestival", selectedFestival);
+                localStorage.setItem("hasVoted", "true");
+
+                // Hide the form and display the thank you message
+                document.getElementById("festivalForm").style.display = "none";
+                document.getElementById("thankYouMessage").style.display = "block";
+                // Change the text inside the h1 element
+                document.querySelector("h1").textContent = "Thanks For Your Vote";
+            }
+        });
+    </script>
+</body>
+</html>

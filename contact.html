@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css" type="text/css">
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="Logo" height="50" style="margin-left: 50px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mx-3">
+                    <a class="nav-link me-6" href="home.html">Home</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link me-6" href='food.html'>Food</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link me-6" href="Malaysia Festival.html">Festival</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link me-6" href="game.html">Game</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link me-6" href="aboutus.html">About</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link me-6" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section id="contact-section" class="py-5 bg-dark text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 class="text-uppercase">Contact Us</h1>
+                <hr style="width: 20%">
+                <p class="lead">Have questions or comments?</p>
+                <div id="alert"></div>
+            </div>
+        </div>
+        <div class="row">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="c3a04941-cddb-4576-8c6b-69f1f3283ee2">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="name" class="sr-only">Name</label>
+                            <input type="text" class="form-control input-lg" id="name" name="name" placeholder="Name"
+                                value="" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" class="form-control input-lg" id="email" name="email"
+                                placeholder="Email" value="" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="phone" class="sr-only">Phone Number</label>
+                            <input type="text" class="form-control input-lg" id="phone" name="phone"
+                                placeholder="Phone Number" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="message" class="sr-only">Message</label>
+                            <textarea class="form-control input-lg" rows="8" id="message" name="message"
+                                placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-default btn-lg btn-block" id="send" style="color: white; border: 1px solid white;">Submit</button>
+
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="form-group">
+                            <div class="h-captcha" data-captcha="true"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+<footer>
+    <div class="container pt-5 border-bottom">
+        <div class="row">
+            <!-- Logo section -->
+            <div class="col-md-3 col-sm-12 footer-logo">
+                <img src="https://drive.google.com/uc?export=view&id=1fnumiE0X4BoO9uZy0iPUOlKfKoxrwrEh"
+                    alt="Website Logo" class="logo-image">
+                <p class="logo-description">"Malaysia: A vibrant blend of Malay, Chinese, Indian, and indigenous
+                    cultures, celebrated through festivals, cuisine, and landmarks."</p>
+            </div>
+
+            <!-- Quick Links section -->
+            <div class="col-md-3 col-sm-12 footer-section">
+                <h4>Quick Links</h4>
+                <a href="home.html" class="footer-link">Home</a>
+                <a href="food.html" class="footer-link">Foods</a>
+                <a href="Malaysia Festival.html" class="footer-link">Festivals</a>
+                <a href="game.html" class="footer-link">Games</a>
+            </div>
+
+            <!-- Contact section -->
+            <div class="col-md-3 col-sm-12 footer-section">
+                <h4>Contact Us</h4>
+                <p class="footer-contact">
+                    <strong>Email:</strong> chaizhenjie@1utar.my<br>
+                    <br>
+                    <strong>Phone:</strong>+6011-10869579
+                </p>
+            </div>
+            <!-- Social Links section -->
+            <div class="col-md-3 col-sm-12 footer-section">
+                <h4>Other</h4>
+                <a href="aboutus.html" class="footer-link">About</a>
+                <a href="contact.html" class="footer-link">Contact Us</a>
+                <br>
+                <br>
+                <button id="backToTop">Back to Top</button>
+
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://web3forms.com/client/script.js" async defer></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+
+</script>
+</body>
+
+</html>

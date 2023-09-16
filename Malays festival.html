@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Malay Festival</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('Image for festival/KLCC-2a.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #f7f9fc;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+
+        .main-content {
+            flex: 1;
+            /* allows this section to expand and push the footer to the bottom */
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #0054a6;
+            color: #fff;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .header p {
+            font-size: 18px;
+            opacity: 0.8;
+        }
+
+        .category {
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px auto 0;
+            /* Add margin-top to create a gap between header and content */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.7);
+            max-width: 1200px;
+            width: calc(100% - 60px);
+        }
+
+        .category h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #0054a6;
+        }
+
+        .category p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .picture-item {
+            display: flex;
+            flex-direction: column;
+            /* Display picture above info on small screens */
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .picture-item img {
+            width: 300px;
+            height: 200px;
+            border: 3px solid #e0e5ec;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .picture-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .image-info {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            color: #333;
+            max-width: 800px;
+            display: none;
+        }
+
+
+        @media (max-width: 768px) {
+            .picture-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .picture-item img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .navbar {
+            background-image: url('https://drive.google.com/uc?export=view&id=1kIOFO51HzRZ-KBdjJHP3BvobsggSiAuA');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .text-end {
+            text-align: right;
+        }
+
+        .nav-item:hover {
+            transform: translateY(-3px);
+            transition: transform 0.2s;
+        }
+
+        .navbar-toggler-icon {
+            transition: transform 0.3s;
+        }
+
+        .navbar-toggler-icon.clicked {
+            transform: rotate(90deg);
+        }
+
+        .nav-link:hover {
+            color: white !important;
+            background-color: #66ccff;
+            border: 5px solid #66ffcc;
+            padding: 4px 10px;
+            border-radius: 5px;
+        }
+
+        .nav-link {
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+
+        footer {
+            font-family: 'Rubik', sans-serif;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            color: #333;
+
+        }
+
+
+        .footer-section {
+            flex: 1;
+            text-align: center;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 10px;
+        }
+
+        .footer-link {
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #666;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: #000;
+        }
+
+        .footer-contact a {
+            color: #0062A5;
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo-image {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="https://drive.google.com/uc?export=view&id=1fnumiE0X4BoO9uZy0iPUOlKfKoxrwrEh" alt="Logo"
+                height="50" style="margin-left: 50px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="home.html"><b>Home</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="food.html"><b>Food</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="Malaysia Festival.html"><b>Festival</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="game.html"><b>Game</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="aboutus.html"><b>About</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="contact.html"><b>Contact Us</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header">
+        <div class="header-container">
+            <h1>Malaysia Festival</h1>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="category">
+            <h2>Malay Festival</h2>
+            <p>Click the following picture to explore the various history of Malay festivals.</p>
+
+            <div class="picture-container">
+                <div class="picture-item">
+                    <img src="Image for festival/Hari Raya 2.jpg" alt="Hari Raya Aidilfitri">
+                    <div class="image-info">
+                        <h3>Hari Raya Aidilfitri</h3>
+                        <p>Hari Raya Aidilfitri, also known as Eid al-Fitr, is a significant Muslim holiday celebrated
+                            worldwide. It marks the end of Ramadan, a month of fasting and prayer. During this joyous
+                            occasion, Muslims don their finest clothes, clean and decorate their homes, and prepare
+                            special meals and sweets. The day begins with a communal prayer at the mosque, emphasizing
+                            unity and gratitude. Charity is a key aspect, with Muslims giving to those in need. Visiting
+                            family and friends, exchanging gifts, and sharing traditional dishes are customary. 'Selamat
+                            Hari Raya' or 'Eid Mubarak' greetings abound, fostering a sense of love, forgiveness, and
+                            community.</p>
+                        <a href="hari raya.html">
+                            <button
+                                style="background-color:#333333;color:#00FF00;border-radius:5px; margin-top: 40px;">Click
+                                Me To Watch Video About Hari Raya Adilfitri</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="picture-item">
+                    <img src="Image for festival/puasa.jpg" alt="Hari Raya Puasa">
+                    <div class="image-info">
+                        <h3>Hari Raya Puasa</h3>
+                        <p>Hari Raya Puasa, also known as Eid al-Fitr, is a significant religious festival celebrated by
+                            Muslims worldwide. It marks the conclusion of Ramadan, the holy month of fasting and
+                            spiritual reflection. During Hari Raya Puasa, Muslims dress in their finest attire, decorate
+                            their homes, and partake in festive meals. The day commences with a communal prayer at the
+                            mosque, fostering a sense of unity and gratitude. Charity is a central tenet, with Muslims
+                            offering donations to the less fortunate. Visiting friends and family, exchanging gifts, and
+                            sharing traditional dishes are common customs, while warm greetings like 'Selamat Hari Raya'
+                            or 'Eid Mubarak' are exchanged to spread love and goodwill.</p>
+                        <a href="puasa.html">
+                            <button
+                                style="background-color:#333333;color:#00FF00;border-radius:5px; margin-top: 40px;">Click
+                                Me To Watch Video About Hari Raya Puasa</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="picture-item">
+                    <img src="Image for festival/Awal Muharram 2.jpg" alt="Awal Muharram">
+                    <div class="image-info">
+                        <h3>Awal Muharram</h3>
+                        <p>Awal Muharram, also known as Islamic New Year or Hijri New Year, marks the beginning of the
+                            Islamic lunar calendar year. It's a significant occasion for Muslims, signifying a time of
+                            reflection, renewal, and spiritual growth. While it is not as elaborate as some other
+                            Islamic festivals, it's a time for Muslims to remember the migration (Hijra) of Prophet
+                            Muhammad from Mecca to Medina in 622 CE, which holds historical and religious importance.
+                            Muslims may engage in prayers, attend sermons, and make resolutions for self-improvement in
+                            the year ahead. The date of Awal Muharram varies each year since the Islamic calendar is
+                            lunar-based.</p>
+                        <a href="AwalMuharram.html">
+                            <button
+                                style="background-color:#333333;color:#00FF00;border-radius:5px; margin-top: 40px;">Click
+                                Me To Watch Video About Awal Muharram</button>
+                        </a>
+                    </div>
+                </div>
+                <a href="Malaysia Festival.html">
+                    <button
+                        style="background-color:#333333; color:#00FF00; border-radius:5px; transition: background-color 0.3s, color 0.3s;">Click
+                        Me To Go Back To Main Pages</button>
+                </a>
+                <button style="background-color:#333333;color:#00FF00;border-radius:5px; margin-top: 40px;"
+                    id="increaseTextSize">Click Me To Increase Text Size</button>
+                <button style="background-color:#333333;color:#00FF00;border-radius:5px; margin-top: 40px; "
+                    id="decreaseTextSize">Click Me To Decrease Text Size</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container pt-5 border-bottom">
+            <div class="row">
+                <!-- Logo section -->
+                <div class="col-md-3 col-sm-12 footer-logo">
+                    <img src="https://drive.google.com/uc?export=view&id=1fnumiE0X4BoO9uZy0iPUOlKfKoxrwrEh"
+                        alt="Website Logo" class="logo-image">
+                    <p class="logo-description">"Malaysia: A vibrant blend of Malay, Chinese, Indian, and indigenous
+                        cultures, celebrated through festivals, cuisine, and landmarks."</p>
+                </div>
+
+                <!-- Quick Links section -->
+                <div class="col-md-3 col-sm-12 footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="home.html" class="footer-link">Home</a>
+                    <a href="food.html" class="footer-link">Foods</a>
+                    <a href="Malaysia Festival.html" class="footer-link">Festivals</a>
+                    <a href="game.html" class="footer-link">Games</a>
+                </div>
+
+                <!-- Contact section -->
+                <div class="col-md-3 col-sm-12 footer-section">
+                    <h4>Contact Us</h4>
+                    <p class="footer-contact">
+                        <strong>Email:</strong> chaizhenjie@1utar.my<br>
+                        <br>
+                        <strong>Phone:</strong>+6011-10869579
+                    </p>
+                </div>
+                <!-- Social Links section -->
+                <div class="col-md-3 col-sm-12 footer-section">
+                    <h4>Other</h4>
+                    <a href="aboutus.html" class="footer-link">About</a>
+                    <a href="contact.html" class="footer-link">Contact Us</a>
+                    <br>
+                    <br>
+
+                </div>
+            </div>
+        </div>
+            
+    </footer>
+    <!-- jQuery (full version) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle with Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Function to set the background image and store choice in cookies
+        function setBackgroundAndStore(imageUrl) {
+            // Set the background image
+            document.body.style.backgroundImage = `url('${imageUrl}')`;
+
+            // Store the choice in cookies with SameSite=None attribute
+            document.cookie = `backgroundImage=${encodeURIComponent(imageUrl)}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/; SameSite=None; Secure`;
+
+            // Store the choice in session storage
+            sessionStorage.setItem('backgroundImage', imageUrl);
+        }
+
+        const images = document.querySelectorAll(".picture-item img");
+        images.forEach((image) => {
+            image.addEventListener("click", () => {
+                const info = image.nextElementSibling; // Get the adjacent image info
+                info.style.display = "block"; // Show the image info
+
+                // Call the function to set the background and store the choice
+                setBackgroundAndStore(image.getAttribute("src"));
+            });
+        });
+
+        // Function to retrieve the background image from cookies
+        function getBackgroundFromCookie() {
+            const cookies = document.cookie.split(';');
+            for (const cookie of cookies) {
+                const [name, value] = cookie.trim().split('=');
+                if (name === "backgroundImage") {
+                    return decodeURIComponent(value);
+                }
+            }
+            return null;
+        }
+
+        // Set the background image from cookies (if available)
+        const storedBackground = getBackgroundFromCookie();
+        if (storedBackground) {
+            document.body.style.backgroundImage = `url('${storedBackground}')`;
+        }
+
+        function setTextSizeAndStore(size) {
+            // Set the text size for all text elements on the page
+            const textElements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6');
+            textElements.forEach(element => {
+                element.style.fontSize = size;
+            });
+
+            // Store the choice in cookies with SameSite=None attribute
+            document.cookie = `textSize=${size}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/; SameSite=None; Secure`;
+        }
+
+        // Button to increase text size
+        document.getElementById('increaseTextSize').addEventListener('click', function () {
+            setTextSizeAndStore('20px');
+        });
+
+        // Button to decrease text size
+        document.getElementById('decreaseTextSize').addEventListener('click', function () {
+            setTextSizeAndStore('16px');
+        });
+
+        // Function to retrieve the text size from cookies
+        function getTextSizeFromCookie() {
+            const cookies = document.cookie.split(';');
+            for (const cookie of cookies) {
+                const [name, value] = cookie.trim().split('=');
+                if (name === "textSize") {
+                    return decodeURIComponent(value);
+                }
+            }
+            return null;
+        }
+
+        // Set the text size from cookies (if available)
+        const storedTextSize = getTextSizeFromCookie();
+        if (storedTextSize) {
+            // Set the text size for all text elements on the page
+            const textElements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6');
+            textElements.forEach(element => {
+                element.style.fontSize = storedTextSize;
+            });
+        }
+    </script>
+</body>
+
+</html>

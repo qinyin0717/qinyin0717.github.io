@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="style.css">
+
+</style>
+<section class="feedback" id="feedback">
+    <div class="heading">
+        <h2>What is Your Favourites Malaysia Cuisine</h2>
+    </div>
+    <form id="feedbackForm" class="feedback-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="rating">Rating:</label>
+        <div class="rating">
+            <span class="star" data-rating="1">&#9733;</span>
+            <span class="star" data-rating="2">&#9733;</span>
+            <span class="star" data-rating="3">&#9733;</span>
+            <span class="star" data-rating="4">&#9733;</span>
+            <span class="star" data-rating="5">&#9733;</span>
+        </div>
+        <input type="hidden" id="rating" name="rating" required>
+
+
+        <label for="review">Review:</label><br>
+        <textarea id="review" name="review" required placeholder="Write your review here..."></textarea><br><br>
+
+
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear" id="clearButton">
+
+    </form>
+    <br>
+    <a href="food.html">
+        <button>Click Me To Go Back Previous Pages</button>
+    </a>
+</section>
+<script>
+
+
+    document.getElementById('clearButton').addEventListener('click', function () {
+
+        document.querySelectorAll('.star').forEach(function (star) {
+            star.classList.remove('active');
+        });
+
+
+        document.getElementById('rating').value = '';
+    });
+
+
+    document.getElementById('feedbackForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+
+        var name = document.getElementById('name').value;
+        var rating = document.getElementById('rating').value;
+        var review = document.getElementById('review').value;
+
+
+        var feedback = {
+            name: name,
+            rating: rating,
+            review: review
+        };
+
+
+        var feedbackJSON = JSON.stringify(feedback);
+
+        // Set cookie with feedback
+        document.cookie = 'feedback=' + encodeURIComponent(feedbackJSON);
+
+
+        this.reset();
+
+
+        document.querySelectorAll('.star').forEach(function (star) {
+            star.classList.remove('active');
+        });
+
+
+        document.getElementById('rating').value = '';
+
+
+        alert('Thank you for your submission!');
+    });
+
+</script>
+<script src="script.js"></script>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Indians Festival</title>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('Image for festival/KLCC-2a.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #f7f9fc;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+
+        .main-content {
+            flex: 1;
+            /* allows this section to expand and push the footer to the bottom */
+        }
+
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #0054a6;
+            color: #fff;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .header p {
+            font-size: 18px;
+            opacity: 0.8;
+        }
+
+        .category {
+            border-radius: 10px;
+            padding: 30px; 
+            margin: 30px auto 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.7);
+            max-width: 1200px;
+            width: calc(100% - 60px);
+        }
+
+        .category h2 {
+            margin: 0;
+            font-size: 24px; 
+            color: #0054a6;
+        }
+
+        .category p {
+            margin: 10px 0; 
+            font-size: 16px; 
+            color: #333;
+            line-height: 1.4; 
+        }
+
+        .picture-item {
+            display: flex;
+            flex-direction: column; /* Display picture above info on small screens */
+            align-items: center;
+            margin: 10px 0; 
+        }
+
+        .picture-item img {
+            width: 300px;
+            height: 200px;
+            border: 3px solid #e0e5ec;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .picture-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .image-info {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            color: #333;
+            max-width: 800px; 
+            display: none;
+        }
+
+        
+        @media (max-width: 768px) {
+            .picture-item {
+                flex-direction: column; 
+                text-align: center;
+            } 
+
+            .picture-item img {
+                width: 100%; 
+                height: auto;
+            }
+        }
+
+        .navbar {
+            background-image: url('https://drive.google.com/uc?export=view&id=1kIOFO51HzRZ-KBdjJHP3BvobsggSiAuA');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .text-end {
+            text-align: right;
+        }
+
+        .nav-item:hover {
+            transform: translateY(-3px);
+            transition: transform 0.2s;
+        }
+
+        .navbar-toggler-icon {
+            transition: transform 0.3s;
+        }
+
+        .navbar-toggler-icon.clicked {
+            transform: rotate(90deg);
+        }
+
+        .nav-link:hover {
+            color: white !important;
+            background-color: #66ccff;
+            border: 5px solid #66ffcc;
+            padding: 4px 10px;
+            border-radius: 5px;
+        }
+
+        .nav-link {
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+
+        footer {
+            font-family: 'Rubik', sans-serif;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            color: #333;
+
+        }
+
+
+        .footer-section {
+            flex: 1;
+            text-align: center;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 10px;
+        }
+
+        .footer-link {
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #666;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: #000;
+        }
+
+        .footer-contact a {
+            color: #0062A5;
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo-image {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="https://drive.google.com/uc?export=view&id=1fnumiE0X4BoO9uZy0iPUOlKfKoxrwrEh" alt="Logo"
+                height="50" style="margin-left: 50px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="home.html"><b>Home</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="food.html"><b>Food</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="Malaysia Festival.html"><b>Festival</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="game.html"><b>Game</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="aboutus.html"><b>About</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="contact.html"><b>Contact Us</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header">
+        <div class="header-container">
+            <h1>Malaysia Festival</h1>
+        </div>
+    </div>
+
+    <div class="main-content">
+    <div class="category">
+        <h2>Indian Festival</h2>
+        <p>Click the following pictures to experience the history of Indian festivals.</p> 
+    
+    <div class="picture-container">
+        <div class="picture-item">
+            <img src="Image for festival/Deepavali 2.jpg" alt="Deepavali">
+            <div class="image-info">
+                <h3>Deepavali</h3>
+                <p>Deepavali, also known as Diwali, is a significant Hindu festival celebrated by millions of people worldwide. Its history is rooted in various legends and religious significance. One popular narrative marks the return of Lord Rama, an avatar of Lord Vishnu, to his kingdom Ayodhya after defeating the demon king Ravana. People lit oil lamps to welcome him, symbolizing the victory of light over darkness and good over evil. Another legend involves the goddess Lakshmi, who represents wealth and prosperity, and her association with Diwali as a time for wealth and blessings. The festival also signifies the triumph of knowledge over ignorance and is marked by colorful decorations, feasting, and the exchange of gifts.</p>
+                <a href="Deepavali.html">
+                    <button style="background-color:#333333;color:#00FF00;border-radius:5px; margin-top: 40px;">Click Me To Watch Video About Deepavali</button>
+                </a>
+            </div>
+        </div>
+        <div class="picture-item">
+            <img src="Image for festival/Thaipusam 2.jpg" alt="Thaipusam">
+            <div class="image-info">
+                <h3>Thaipusam</h3>
+                <p>Thaipusam is a significant Hindu festival primarily celebrated by the Tamil community, particularly in South India, Malaysia, Singapore, and other places with Tamil populations. It usually falls in January or February. The festival is dedicated to Lord Murugan, the Hindu god of war, and represents the victory of good over evil. Devotees often perform acts of devotion, such as carrying kavadi (elaborate decorative structures) attached to their bodies or piercing their skin with hooks and skewers. These acts are expressions of penance and devotion to seek blessings, purification, or fulfill vows. Thaipusam is also marked by processions, music, and a strong sense of community and spiritual unity among participants.</p>
+                <a href="ThaipusamVideo.html">
+                    <button style="background-color:#333333;color:#00FF00;border-radius:5px; margin-top: 40px;">Click Me To Watch Video About Thaipusam</button>
+                </a>
+            </div>
+        </div>
+        <div class="picture-item">
+            <img src="Image for festival/Navratri 2.jpg" alt="Navratri (Durga festival)">
+            <div class="image-info">
+                <h3>Navratri (Durga festival)</h3>
+                <p>Navratri, also known as the Durga festival, is a Hindu celebration lasting nine nights and ten days, typically observed in September or October. It honors the goddess Durga and her various manifestations. Each night represents the worship of a different aspect of the goddess. The festival emphasizes the triumph of good over evil, with the ninth day known as Durga Puja, symbolizing the victory of Durga over the demon Mahishasura. Celebrations include music, dance, fasting, and prayer, with vibrant processions and elaborate decorations. It's a time of devotion, cultural performances, and communal gatherings, promoting spiritual renewal and the strengthening of familial and community bonds.</p>
+                <a href="NavratriVideo.html">
+                    <button style="background-color:#333333;color:#00FF00;border-radius:5px; margin-top: 40px;">Click Me To Watch Video About Navratri (Durga Festival)</button>
+                </a>
+            </div>
+        </div>
+        <a href="Malaysia Festival.html">
+            <button style="background-color:#333333; color:#00FF00; border-radius:5px; transition: background-color 0.3s, color 0.3s;">Click Me To Go Back To Main Pages</button>
+        </a>
+        <button style="background-color:#333333;color:#00FF00;border-radius:5px; margin-top: 40px;" id="increaseTextSize">Click Me To Increase Text Size</button>
+        <button style="background-color:#333333;color:#00FF00;border-radius:5px; margin-top: 40px; " id="decreaseTextSize">Click Me To Decrease Text Size</button>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="container pt-5 border-bottom">
+            <div class="row">
+                <!-- Logo section -->
+                <div class="col-md-3 col-sm-12 footer-logo">
+                    <img src="https://drive.google.com/uc?export=view&id=1fnumiE0X4BoO9uZy0iPUOlKfKoxrwrEh"
+                        alt="Website Logo" class="logo-image">
+                    <p class="logo-description">"Malaysia: A vibrant blend of Malay, Chinese, Indian, and indigenous
+                        cultures, celebrated through festivals, cuisine, and landmarks."</p>
+                </div>
+
+                <!-- Quick Links section -->
+                <div class="col-md-3 col-sm-12 footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="home.html" class="footer-link">Home</a>
+                    <a href="food.html" class="footer-link">Foods</a>
+                    <a href="Malaysia Festival.html" class="footer-link">Festivals</a>
+                    <a href="game.html" class="footer-link">Games</a>
+                </div>
+
+                <!-- Contact section -->
+                <div class="col-md-3 col-sm-12 footer-section">
+                    <h4>Contact Us</h4>
+                    <p class="footer-contact">
+                        <strong>Email:</strong> chaizhenjie@1utar.my<br>
+                        <br>
+                        <strong>Phone:</strong>+6011-10869579
+                    </p>
+                </div>
+                <!-- Social Links section -->
+                <div class="col-md-3 col-sm-12 footer-section">
+                    <h4>Other</h4>
+                    <a href="aboutus.html" class="footer-link">About</a>
+                    <a href="contact.html" class="footer-link">Contact Us</a>
+                    <br>
+                    <br>
+
+                </div>
+            </div>
+        </div>
+            
+    </footer>
+    <!-- jQuery (full version) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle with Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to set the background image and store choice in cookies
+        function setBackgroundAndStore(imageUrl) {
+            // Set the background image
+            document.body.style.backgroundImage = `url('${imageUrl}')`;
+
+            // Store the choice in cookies with SameSite=None attribute
+            document.cookie = `backgroundImage=${encodeURIComponent(imageUrl)}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/; SameSite=None; Secure`;
+
+            // Store the choice in session storage
+            sessionStorage.setItem('backgroundImage', imageUrl);
+        }
+
+        const images = document.querySelectorAll(".picture-item img");
+        images.forEach((image) => {
+            image.addEventListener("click", () => {
+                const info = image.nextElementSibling; // Get the adjacent image info
+                info.style.display = "block"; // Show the image info
+
+                // Call the function to set the background and store the choice
+                setBackgroundAndStore(image.getAttribute("src"));
+            });
+        });
+
+        // Function to retrieve the background image from cookies
+        function getBackgroundFromCookie() {
+            const cookies = document.cookie.split(';');
+            for (const cookie of cookies) {
+                const [name, value] = cookie.trim().split('=');
+                if (name === "backgroundImage") {
+                    return decodeURIComponent(value);
+                }
+            }
+            return null;
+        }
+
+        // Set the background image from cookies (if available)
+        const storedBackground = getBackgroundFromCookie();
+        if (storedBackground) {
+            document.body.style.backgroundImage = `url('${storedBackground}')`;
+        }
+
+        function setTextSizeAndStore(size) {
+        // Set the text size for all text elements on the page
+        const textElements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6');
+        textElements.forEach(element => {
+            element.style.fontSize = size;
+        });
+
+        // Store the choice in cookies with SameSite=None attribute
+        document.cookie = `textSize=${size}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/; SameSite=None; Secure`;
+    }
+
+    // Button to increase text size
+    document.getElementById('increaseTextSize').addEventListener('click', function() {
+        setTextSizeAndStore('20px');
+    });
+
+    // Button to decrease text size
+    document.getElementById('decreaseTextSize').addEventListener('click', function() {
+        setTextSizeAndStore('16px');
+    });
+
+    // Function to retrieve the text size from cookies
+    function getTextSizeFromCookie() {
+        const cookies = document.cookie.split(';');
+        for (const cookie of cookies) {
+            const [name, value] = cookie.trim().split('=');
+            if (name === "textSize") {
+                return decodeURIComponent(value);
+            }
+        }
+        return null;
+    }
+
+    // Set the text size from cookies (if available)
+    const storedTextSize = getTextSizeFromCookie();
+    if (storedTextSize) {
+        // Set the text size for all text elements on the page
+        const textElements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6');
+        textElements.forEach(element => {
+            element.style.fontSize = storedTextSize;
+        });
+    }
+
+    </script>
+</body>
+</html>

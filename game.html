@@ -1,0 +1,2250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traditional Malaysian Games</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body {
+            background-image: url('https://drive.google.com/uc?export=view&id=1hLjOeIIi4pLLrwrenj2SpVJKvCaPe8b3');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+
+        #gamesDisplay {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        #gamesDisplay.show {
+            opacity: 1;
+        }
+
+        .gameImage {
+            width: 400px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gameImage:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .game-description {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+
+
+        .navbar {
+            background-image: url('https://drive.google.com/uc?export=view&id=1kIOFO51HzRZ-KBdjJHP3BvobsggSiAuA');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .text-end {
+            text-align: right;
+        }
+
+        .nav-item:hover {
+            transform: translateY(-3px);
+            transition: transform 0.2s;
+        }
+
+        .navbar-toggler-icon {
+            transition: transform 0.3s;
+        }
+
+        .navbar-toggler-icon.clicked {
+            transform: rotate(90deg);
+        }
+
+        .nav-link:hover {
+            color: white !important;
+            background-color: #66ccff;
+            border: 5px solid #66ffcc;
+            padding: 4px 10px;
+            border-radius: 5px;
+        }
+
+        .nav-link {
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+
+        option {
+            color: #9999FF;
+        }
+
+
+        .custom-modal-size {
+            max-width: 50%;
+        }
+
+        .settings-panel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 10px;
+        }
+
+        .settings-panel label {
+            margin-right: 5px;
+        }
+
+        option.white-bg {
+            background-color: white;
+        }
+
+        option.lightyellow-bg {
+            background-color: lightyellow;
+        }
+
+        option.palegreen-bg {
+            background-color: palegreen;
+        }
+
+        option.lightpink-bg {
+            background-color: lightpink;
+        }
+
+        option.lightblue-bg {
+            background-color: lightblue;
+        }
+
+
+        .main-content {
+            min-height: calc(100vh - 150px);
+        }
+
+
+        footer {
+            font-family: 'Rubik', sans-serif;
+
+            padding: 17px 0;
+            color: #333;
+
+        }
+
+
+        .footer-section {
+            flex: 1;
+            text-align: center;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 10px;
+        }
+
+        .footer-link {
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #666;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: #000;
+        }
+
+        .footer-contact a {
+            color: #0062A5;
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo-image {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .whatsapp-share-button {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: #25D366;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .whatsapp-icon {
+            width: 32px;
+            height: auto;
+            margin: 0;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+
+        .whatsapp-icon:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<a href="#" id="whatsappShare" class="whatsapp-share-button">
+    <img src="https://drive.google.com/uc?export=view&id=1U8KT-KMpuhvekKx6F-Tjs66BLHfNYwhy" alt="WhatsApp"
+        class="whatsapp-icon">
+</a>
+
+
+<div class="main-content">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="https://drive.google.com/uc?export=view&id=1fnumiE0X4BoO9uZy0iPUOlKfKoxrwrEh" alt="Logo"
+                height="50" style="margin-left: 50px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="home.html"><b>Home</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="food.html"><b>Food</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="Malaysia Festival.html"><b>Festival</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="game.html"><b>Game</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="aboutus.html"><b>About</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5 text-end" href="contact.html"><b>Contact Us</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2>Traditional Malaysian Games</h2>
+        <p>Here, we introduce some of the traditional games of Malaysia...</p>
+        <h4>Font Size Preference:</h4>
+        <select id="fontSizePreference" class="form-control mb-3" onchange="updateFontSizePreference()">
+            <option value="default">Default</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+        <h4>Select your favorite ethnic group:</h4>
+        <select id="gameSelect" class="form-control" onchange="displayGames()">
+            <option value="none">--Select--</option>
+            <option value="malay">Malay</option>
+            <option value="chinese">Chinese</option>
+            <option value="indian">Indian</option>
+            <option value="indigenous">Indigenous Tribes</option>
+        </select>
+
+        <div id="gamesDisplay" class="mt-5" style="display: none;">
+        </div>
+    </div>
+
+    <div id="imageTip" class="position-fixed bottom-0 end-0 p-3"
+        style="z-index: 5; display: none; background-color: rgba(0,0,0,0.7); color: white; border-radius: 8px;">
+        🖱️ Click on the game images for more details!
+        <button id="closeTip" class="btn btn-sm btn-secondary ms-2">Got it!</button>
+    </div>
+
+    <!-- Sepak Takraw Modal -->
+    <div class="modal fade" id="sepakTakrawModal" tabindex="-1" aria-labelledby="sepakTakrawModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal-size">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sepakTakrawModalLabel">Sepak Takraw</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="settings-panel container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-6 col-md-3">
+                            <label>Font Size:</label>
+                        </div>
+                        <div class="col-6 col-md-3 text-center">
+                            <button class="decreaseFont btn btn-sm">-</button>
+                            <span class="currentFontSize mx-2">14</span>
+                            <button class="increaseFont btn btn-sm">+</button>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <label>Background Color:</label>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <select class="bgColorSelector form-control form-control-sm">
+                                <option value="white" class="white-bg">White</option>
+                                <option value="lightyellow" class="lightyellow-bg">Light Yellow</option>
+                                <option value="palegreen" class="palegreen-bg">Pale Green</option>
+                                <option value="lightpink" class="lightpink-bg">Light Pink</option>
+                                <option value="lightblue" class="lightblue-bg">Light Blue</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <button class="toggleDarkMode btn btn-sm btn-primary">Toggle Dark Mode</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/wwGbCVdUAbA" frameborder="0"
+                        allowfullscreen></iframe>
+
+                    <h4>Introduction:</h4>
+                    <p>Sepak Takraw is a sport native to Southeast Asia, with its roots traced back to the
+                        Malay-Thai
+                        Peninsula. It's often described as "kick volleyball" because it combines elements from
+                        football
+                        (soccer) and volleyball. However, unlike volleyball, players use their feet, head, knees,
+                        and
+                        chest to touch the ball.</p>
+
+                    <h4>History:</h4>
+                    <p>The origins of Sepak Takraw remain a matter of intense debate. However, it's believed to have
+                        been invented by the Malayan royal court more than 500 years ago. The game was initially a
+                        form
+                        of entertainment for kings and noblemen. Over time, its popularity spread, and it became a
+                        sport
+                        played by the masses.</p>
+
+                    <h4>The Ball (Takraw):</h4>
+                    <p>The ball used in Sepak Takraw, called a "takraw," is traditionally made from woven rattan or
+                        synthetic material that replicates the feel of rattan. It's smaller than a volleyball but is
+                        hard and dense.</p>
+
+                    <h4>The Court:</h4>
+                    <p>The Sepak Takraw court is similar in size to a badminton court. It's rectangular and divided
+                        into
+                        two equal halves by a net. The standard height of the net varies for men and women, with the
+                        men's net being 1.52 meters in the center and the women's net being 1.42 meters.</p>
+
+                    <h4>Rules and Gameplay:</h4>
+                    <ul>
+                        <li>The game is played between two teams, each consisting of three players: a "feeder" or
+                            server, a "killer" or attacker, and a "tekong" or defender.</li>
+                        <li>The objective is to send the takraw ball over the net using feet, head, knees, and chest
+                            without letting it touch the ground within your court.</li>
+                        <li>The server begins the rally by tossing the ball to himself and kicking it over the net
+                            to
+                            the opposing side</li>
+                        <li>Points are scored by making the ball land in the opponent's court, much like volleyball.
+                            If
+                            the ball touches any part of the body above the chest (especially the arms or hands), a
+                            point is awarded to the opposing team.</li>
+                        <li>The game is typically played in sets, with a team needing to win two out of three sets
+                            to
+                            win the match. Each set goes up to 21 points, but a team must win by at least two points
+                        </li>
+                    </ul>
+
+                    <h4>Popularity:</h4>
+                    <p>While Sepak Takraw is a traditional game of the Malay people, its popularity has spread
+                        throughout Southeast Asia, with countries like Thailand, Laos, and the Philippines having
+                        their
+                        national teams. The sport also features in the Asian Games and the Southeast Asian Games..
+                    </p>
+
+                    <h4>Conclusion:</h4>
+                    <p>Sepak Takraw is more than just a game; it's a showcase of agility, flexibility, and acrobatic
+                        skills. The mesmerizing airborne spins and powerful bicycle kicks make it a thrilling sport
+                        to
+                        watch and play.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Congkak Modal -->
+    <div class="modal fade" id="CongkakModal" tabindex="-1" aria-labelledby="congkakModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal-size">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="congkakModalLabel">Congkak</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="settings-panel container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-6 col-md-3">
+                            <label>Font Size:</label>
+                        </div>
+                        <div class="col-6 col-md-3 text-center">
+                            <button class="decreaseFont btn btn-sm">-</button>
+                            <span class="currentFontSize mx-2">14</span>
+                            <button class="increaseFont btn btn-sm">+</button>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <label>Background Color:</label>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <select class="bgColorSelector form-control form-control-sm">
+                                <option value="white" class="white-bg">White</option>
+                                <option value="lightyellow" class="lightyellow-bg">Light Yellow</option>
+                                <option value="palegreen" class="palegreen-bg">Pale Green</option>
+                                <option value="lightpink" class="lightpink-bg">Light Pink</option>
+                                <option value="lightblue" class="lightblue-bg">Light Blue</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <button class="toggleDarkMode btn btn-sm btn-primary">Toggle Dark Mode</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/zAGYhT05AIc" frameborder="0"
+                        allowfullscreen></iframe>
+
+                    <h4>Introduction:</h4>
+                    <p>Congkak, also known as "mancala" in some cultures, is a traditional board game native to the
+                        Malay Peninsula. The game has deep roots in the cultural history of Malaysia and has been
+                        played
+                        for generations. It involves strategy and calculation, making it both entertaining and
+                        intellectually stimulating.</p>
+
+                    <h4>History:</h4>
+                    <p>The exact origins of Congkak are hard to pin down, but it's believed to have been introduced
+                        to
+                        the Malay Peninsula over a thousand years ago. Variations of this game can be found in
+                        various
+                        cultures across Africa, the Middle East, and Asia, indicating its ancient and widespread
+                        appeal.
+                    </p>
+
+                    <h4>The Board:</h4>
+                    <p>The Congkak board, often beautifully carved from wood, consists of two rows of seven small
+                        holes
+                        and two larger store holes at each end. Players sit on opposite sides of the board, with
+                        each
+                        player controlling one row of holes and one store hole.</p>
+
+                    <h4>The Pieces:</h4>
+                    <p>Traditionally, Congkak uses small shells, beads, or seeds as playing pieces. Each of the 14
+                        smaller holes starts with a set number of pieces, often seven.</p>
+
+                    <h4>Rules and Gameplay:</h4>
+                    <ol>
+                        <li>The objective of the game is to collect as many pieces as possible in the larger store
+                            hole.
+                        </li>
+                        <li>Players take turns picking up all the pieces from one of the smaller holes on their side
+                            and
+                            distributing them, one by one, in a counter-clockwise direction into the subsequent
+                            holes.
+                        </li>
+                        <li>If the last piece lands in the player's store hole, they get another turn.</li>
+                        <li>If the last piece lands in an empty hole on the player's side, they capture all the
+                            pieces
+                            in the opposite hole (on the opponent's side) and place them in their store hole.</li>
+                        <li>The game ends when all the small holes on one side of the board are empty.
+                        </li>
+                        <li>The player with the most pieces in their store hole at the end of the game wins.</li>
+                    </ol>
+
+                    <h4>Popularity:</h4>
+                    <p>While Sepak Takraw is a traditional game of the Malay people, its popularity has spread
+                        throughout Southeast Asia, with countries like Thailand, Laos, and the Philippines having
+                        their
+                        national teams. The sport also features in the Asian Games and the Southeast Asian Games.
+                    </p>
+
+                    <h4>Conclusion:</h4>
+                    <p>Sepak Takraw is more than just a game; it's a showcase of agility, flexibility, and acrobatic
+                        skills. The mesmerizing airborne spins and powerful bicycle kicks make it a thrilling sport
+                        to
+                        watch and play.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gasing Modal -->
+    <div class="modal fade" id="GasingModal" tabindex="-1" aria-labelledby="gasingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal-size">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="gasingModalLabel">Batting Top (Gasing)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="settings-panel container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-6 col-md-3">
+                            <label>Font Size:</label>
+                        </div>
+                        <div class="col-6 col-md-3 text-center">
+                            <button class="decreaseFont btn btn-sm">-</button>
+                            <span class="currentFontSize mx-2">14</span>
+                            <button class="increaseFont btn btn-sm">+</button>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <label>Background Color:</label>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <select class="bgColorSelector form-control form-control-sm">
+                                <option value="white" class="white-bg">White</option>
+                                <option value="lightyellow" class="lightyellow-bg">Light Yellow</option>
+                                <option value="palegreen" class="palegreen-bg">Pale Green</option>
+                                <option value="lightpink" class="lightpink-bg">Light Pink</option>
+                                <option value="lightblue" class="lightblue-bg">Light Blue</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <button class="toggleDarkMode btn btn-sm btn-primary">Toggle Dark Mode</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/goppxr1dGTM" frameborder="0"
+                        allowfullscreen></iframe>
+
+                    <h4>Introduction:</h4>
+                    <p>Gasing, also known as top spinning, is a traditional game that has been played for centuries
+                        among the Malay communities of Southeast Asia, particularly in Malaysia and Indonesia. These
+                        spinning tops are not the typical small toys seen in other parts of the world; some can
+                        weigh as
+                        much as 5 kilograms!</p>
+
+                    <h4>History:</h4>
+                    <p>The origin of Gasing is believed to be agrarian. Farmers in the region would play the game
+                        after
+                        the harvest season to celebrate the bounty. The spinning top was often seen as a symbol of
+                        joy
+                        and prosperity. Over time, the game evolved and became a popular recreational activity, with
+                        different regions having their variations and techniques.</p>
+
+                    <h4>The Gasing:</h4>
+                    <p>A Gasing is typically made of hardwood or sometimes ironwood and is often elaborately carved
+                        and
+                        decorated. The top part of the Gasing is usually pointed, enabling it to spin, while the
+                        bottom
+                        part is broader and flatter. The size and weight vary, but some can be as heavy as 5 kg,
+                        especially those used in competitions.</p>
+
+                    <h4>The Arena:</h4>
+                    <p>The game is often played on a flat and smooth surface. For competitive events, a specific
+                        arena
+                        is prepared, often made of smooth wooden boards to allow the Gasing to spin smoothly and for
+                        an
+                        extended period.</p>
+
+                    <h4>Rules and Gameplay:</h4>
+                    <ol>
+                        <li>The primary objective of the game is to make the Gasing spin for the longest time. The
+                            player whose Gasing spins the longest is the winner.</li>
+                        <li>To start, a player wraps a rope or cord around the Gasing and throws it onto the playing
+                            surface. The skill lies in the technique of the throw and the unwinding of the rope to
+                            give
+                            the Gasing the most extended spin possible.</li>
+                        <li>In some variations, players might need to knock the opponent's Gasing out of a circle or
+                            designated area.</li>
+                        <li>There are different types of competitions: some focus on the duration of the spin, while
+                            others focus on the precision of landing the Gasing inside a particular target area.
+                        </li>
+                        <li>In some regions, there are also artistic performances using the Gasing, where players
+                            showcase various tricks and maneuvers.
+                        </li>
+                    </ol>
+
+                    <h4>Popularity:</h4>
+                    <p>While Gasing is a traditional game, its popularity remains intact, especially in rural areas.
+                        It
+                        is not just seen as a game but also as an art form and a cultural heritage. Annual
+                        competitions
+                        are held in various parts of Malaysia, attracting both local and international tourists.</p>
+
+                    <h4>Conclusion:</h4>
+                    <p>Gasing is not just a game; it's a reflection of the rich cultural heritage of the Malay
+                        community. The intricate designs of the Gasing, combined with the skill and technique
+                        required
+                        to play, make it a fascinating game to both watch and participate in.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wau Modal -->
+    <div class="modal fade" id="WauModal" tabindex="-1" aria-labelledby="wauModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal-size">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="wauModalLabel">Wau</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="settings-panel container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-6 col-md-3">
+                            <label>Font Size:</label>
+                        </div>
+                        <div class="col-6 col-md-3 text-center">
+                            <button class="decreaseFont btn btn-sm">-</button>
+                            <span class="currentFontSize mx-2">14</span>
+                            <button class="increaseFont btn btn-sm">+</button>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <label>Background Color:</label>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <select class="bgColorSelector form-control form-control-sm">
+                                <option value="white" class="white-bg">White</option>
+                                <option value="lightyellow" class="lightyellow-bg">Light Yellow</option>
+                                <option value="palegreen" class="palegreen-bg">Pale Green</option>
+                                <option value="lightpink" class="lightpink-bg">Light Pink</option>
+                                <option value="lightblue" class="lightblue-bg">Light Blue</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <button class="toggleDarkMode btn btn-sm btn-primary">Toggle Dark Mode</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/XAkzUk1ubS8" frameborder="0"
+                        allowfullscreen></iframe>
+
+                    <h4>Introduction:</h4>
+                    <p>Wau Bulan, translated as "Moon Kite" in English, is a uniquely designed kite originating from
+                        Malaysia. It is one of the national symbols of Malaysia, representing both artistry and
+                        craftsmanship. Unlike the typical recreational kites seen worldwide, Wau Bulan is an
+                        elaborate
+                        piece of art with a rich cultural significance.</p>
+
+                    <h4>History:</h4>
+                    <p>The origins of Wau Bulan can be traced back to the Malay Peninsula. It is believed that
+                        farmers
+                        used these kites to scare off birds from their fields. Over time, the design of the kites
+                        evolved, and they became more decorative and intricate. They started to play a significant
+                        role
+                        in celebrations, festivals, and competitions.</p>
+
+                    <h4>The Wau Bulan Design:</h4>
+                    <p>The kite, often large in size, has a broad lower section that resembles the shape of a
+                        crescent
+                        moon, which gives it its name. Intricate floral patterns adorn the face of the kite, which
+                        is
+                        meticulously crafted using colored paper and rice paste. The kite's tail, made of a string
+                        of
+                        bows, produces a humming sound when the kite is flown.</p>
+
+                    <h4>The Arena:</h4>
+                    <p>Open fields free from obstructions are ideal for flying the Wau Bulan. These kites require a
+                        good
+                        breeze, and given their size, a substantial amount of space is needed for them to soar
+                        gracefully.</p>
+
+                    <h4>Rules and Gameplay:</h4>
+                    <ol>
+                        <li>Wau Bulan isn't just about flying; it's about the artistry. Kite-flying competitions
+                            often
+                            judge the kites based on their craftsmanship, design, and the stability of their flight.
+                        </li>
+                        <li>The kite flier must launch the Wau Bulan into the air, ensuring it catches the wind. A
+                            helper often assists by holding the kite up and releasing it at the right moment.</li>
+                        <li>The objective is to keep the kite stable and flying high. The humming sound produced by
+                            the
+                            tail is a sign of a well-flown kite.</li>
+                        <li>In competitions, the kites are judged not just on their flight but also on their design,
+                            craftsmanship, and the beauty of their patterns.</li>
+                    </ol>
+
+                    <h4>Popularity:</h4>
+                    <p>The Wau Bulan is more than just a kite; it's a symbol of Malaysian heritage and artistry.
+                        While
+                        the tradition of kite making and flying remains stronger in rural areas, the Wau Bulan has
+                        gained international recognition. Festivals and competitions celebrating this beautiful kite
+                        are
+                        held annually in Malaysia, drawing enthusiasts from around the world.</p>
+
+                    <h4>Conclusion:</h4>
+                    <p>The Wau Bulan stands as a testament to the rich cultural tapestry of Malaysia. Its intricate
+                        designs and the skill required to craft and fly one make it a significant aspect of Malay
+                        heritage. Both a recreational activity and an art form, the Wau Bulan is a mesmerizing
+                        spectacle
+                        in the Malaysian skies.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Five Stones Modal -->
+    <div class="modal fade" id="fivestonesModal" tabindex="-1" aria-labelledby="fivestonesModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal-size">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="fivestonesModalLabel">Five Stones</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="settings-panel container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-6 col-md-3">
+                            <label>Font Size:</label>
+                        </div>
+                        <div class="col-6 col-md-3 text-center">
+                            <button class="decreaseFont btn btn-sm">-</button>
+                            <span class="currentFontSize mx-2">14</span>
+                            <button class="increaseFont btn btn-sm">+</button>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <label>Background Color:</label>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <select class="bgColorSelector form-control form-control-sm">
+                                <option value="white" class="white-bg">White</option>
+                                <option value="lightyellow" class="lightyellow-bg">Light Yellow</option>
+                                <option value="palegreen" class="palegreen-bg">Pale Green</option>
+                                <option value="lightpink" class="lightpink-bg">Light Pink</option>
+                                <option value="lightblue" class="lightblue-bg">Light Blue</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <button class="toggleDarkMode btn btn-sm btn-primary">Toggle Dark Mode</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/FPuiZ_fQnPA" frameborder="0"
+                        allowfullscreen></iframe>
+
+                    <h4>Introduction:</h4>
+                    <p>Five Stones, also known as "Knucklebones", is a traditional game that has been played by
+                        Chinese
+                        communities and other cultures worldwide for centuries. This game, simple in its materials
+                        but
+                        complex in its gameplay, requires agility, concentration, and dexterity.</p>
+
+                    <h4>History:</h4>
+                    <p>The origins of the Five Stones game can be traced back to ancient times. It was traditionally
+                        played using the actual knucklebones of sheep or other animals. Over time, the game evolved,
+                        and
+                        stones, seeds, or small bags filled with rice or sand became popular substitutes for bones.
+                    </p>
+
+                    <h4>The Game Materials:</h4>
+                    <p>The game is typically played with five small objects. These can be actual stones, seeds, or
+                        small
+                        fabric bags filled with rice, sand, or beans. The bags, when used, are often brightly
+                        colored,
+                        adding a visual element to the game.</p>
+
+                    <h4>The Arena:</h4>
+                    <p>Five Stones requires minimal space and can be played indoors or outdoors. A flat surface,
+                        like a
+                        table or the ground, is ideal.</p>
+
+                    <h4>Rules and Gameplay:</h4>
+                    <ol>
+                        <li><b>Scatter and Pick</b>: The game starts by throwing all five stones on the playing
+                            surface.
+                            The player then throws one stone into the air, tries to pick up another stone from the
+                            ground, and then catches the airborne stone - all using the same hand. This action is
+                            repeated until the player has picked up all the stones.</li>
+                        <li><b>Scatter and Twos</b>: The next level involves picking up two stones at once while one
+                            is
+                            in the air. This continues until all pairs have been picked.</li>
+                        <li><b>Scatter and Threes</b>: Now, the player attempts to pick up three stones while one is
+                            airborne.</li>
+                        <li><b>Scatter and Fours</b>: The challenge is to gather all four stones while one is in the
+                            air.</li>
+                        <li><b>Five Stones in Hand</b>: Finally, the player throws all five stones in the air and
+                            attempts to catch them on the back of the same hand. Then, the player throws them up
+                            again
+                            from the back of the hand and tries to catch them in the palm.</li>
+                        <li>If the player fails at any stage, it becomes the turn of the next player.</li>
+
+                    </ol>
+
+
+                    <h4>Popularity:</h4>
+                    <p>Five Stones, in its various forms, is played in many cultures around the world. It's not only
+                        a
+                        game of skill but also a social activity, often played in groups. In Chinese communities, it
+                        remains a nostalgic game, reminiscent of simpler times before the age of digital
+                        entertainment.
+                    </p>
+
+                    <h4>Conclusion:</h4>
+                    <p>Five Stones is a testament to the beauty of traditional games that require minimal equipment
+                        but
+                        offer rich experiences. The game fosters hand-eye coordination, dexterity, and
+                        concentration.
+                        It's a delightful pastime that bridges generations, evoking memories of childhood while
+                        providing entertainment for the young.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- hopscoth Modal -->
+    <div class="modal fade" id="hopscothModal" tabindex="-1" aria-labelledby="hopscothModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal-size">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="hopscothModalLabel">Hopscoth</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="settings-panel container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-6 col-md-3">
+                            <label>Font Size:</label>
+                        </div>
+                        <div class="col-6 col-md-3 text-center">
+                            <button class="decreaseFont btn btn-sm">-</button>
+                            <span class="currentFontSize mx-2">14</span>
+                            <button class="increaseFont btn btn-sm">+</button>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <label>Background Color:</label>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <select class="bgColorSelector form-control form-control-sm">
+                                <option value="white" class="white-bg">White</option>
+                                <option value="lightyellow" class="lightyellow-bg">Light Yellow</option>
+                                <option value="palegreen" class="palegreen-bg">Pale Green</option>
+                                <option value="lightpink" class="lightpink-bg">Light Pink</option>
+                                <option value="lightblue" class="lightblue-bg">Light Blue</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <button class="toggleDarkMode btn btn-sm btn-primary">Toggle Dark Mode</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/-GBirJtq_FQ" frameborder="0"
+                        allowfullscreen></iframe>
+
+                    <h4>Introduction:</h4>
+                    <p>Hopscotch is a timeless children's game known and played across different cultures
+                        globally.it
+                        has been embraced and enjoyed by many generations of children in beyond. The game involves
+                        players hopping through a series of squares outlined on the ground, often drawn with chalk.
+                    </p>
+
+                    <h4>History:</h4>
+                    <p>The origins of hopscotch are believed to date back to ancient Roman times, where it was used
+                        as a
+                        training exercise for soldiers. The game evolved over the centuries and became a popular
+                        children's game in many countries, including China. The design and rules might vary slightly
+                        from one region to another, but the essence of the game remains consistent. In Malaysia, the
+                        Chinese community has been playing this game for generations, adapting it to local customs
+                        and
+                        traditions.</p>
+
+                    <h4>The Court:</h4>
+                    <p>The traditional hopscotch court consists of a series of numbered squares drawn on the ground,
+                        often using chalk. The squares are usually arranged in a pattern that combines single and
+                        side-by-side squares, forcing the player to hop on one foot or two feet, depending on the
+                        section.</p>
+
+                    <h4>Rules and Gameplay:</h4>
+                    <ul>
+                        <li>A player starts by tossing a small object (often a stone or a beanbag) into the first
+                            square. The aim is for the object to land within the confines of the square without
+                            touching
+                            the borders or bouncing out.</li>
+                        <li>The player then hops through the court, skipping the square with the object. Single
+                            squares
+                            require the player to hop on one foot, while side-by-side squares allow landing on two
+                            feet
+                            simultaneously.</li>
+                        <li>Upon reaching the end of the court, the player turns around and hops back, retrieving
+                            the
+                            object on the way.</li>
+                        <li>The player then proceeds to toss the object into the next square and continues the game.
+                            If
+                            the player completes the course without any mistakes, they continue from the next number
+                            in
+                            the subsequent round.</li>
+                        <li>The game continues until the object has been successfully tossed and retrieved from each
+                            numbered square. Mistakes, such as stepping on a line or losing balance, result in the
+                            end
+                            of the player's turn.</li>
+                    </ul>
+
+                    <h4>Popularity:</h4>
+                    <p>While hopscotch is played by children worldwide, in China, it has been a beloved playground
+                        game
+                        for many generations. Its simplicity, combined with the physical challenge and the joy of
+                        hopping, has made it a favorite among children. Over time, various regional variations and
+                        rules
+                        might have developed, but the core game remains much the same.</p>
+
+                    <h4>Conclusion:</h4>
+                    <p>Hopscotch is a testament to the universality of children's games. Its widespread appeal,
+                        spanning
+                        continents and cultures, highlights the shared joys and experiences of childhood. It remains
+                        a
+                        game that celebrates agility, balance, and the simple pleasure of play.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chapteh Modal -->
+    <div class="modal fade" id="chaptehModal" tabindex="-1" aria-labelledby="chaptehModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal-size">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="chaptehModalLabel">Chapteh</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="settings-panel container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-6 col-md-3">
+                            <label>Font Size:</label>
+                        </div>
+                        <div class="col-6 col-md-3 text-center">
+                            <button class="decreaseFont btn btn-sm">-</button>
+                            <span class="currentFontSize mx-2">14</span>
+                            <button class="increaseFont btn btn-sm">+</button>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <label>Background Color:</label>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <select class="bgColorSelector form-control form-control-sm">
+                                <option value="white" class="white-bg">White</option>
+                                <option value="lightyellow" class="lightyellow-bg">Light Yellow</option>
+                                <option value="palegreen" class="palegreen-bg">Pale Green</option>
+                                <option value="lightpink" class="lightpink-bg">Light Pink</option>
+                                <option value="lightblue" class="lightblue-bg">Light Blue</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <button class="toggleDarkMode btn btn-sm btn-primary">Toggle Dark Mode</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/btjgmI8MudA" frameborder="0"
+                        allowfullscreen></iframe>
+                    <h4>Introduction:</h4>
+                    <p>Chapteh, also known as "Shuttlecock Kicking" or "毽子" (Jiànzi) in Chinese, is a traditional
+                        game
+                        of skill and agility. Primarily played in many Asian countries, it is particularly popular
+                        among
+                        the Chinese communities, including those in Malaysia. The game revolves around keeping a
+                        weighted shuttlecock off the ground using feet and other parts of the body, except for the
+                        hands.</p>
+
+                    <h4>History:</h4>
+                    <p>The origins of Chapteh trace back to ancient China, where it was a popular pastime over two
+                        thousand years ago. Over the centuries, the game spread to various parts of Asia, including
+                        Southeast Asia, where it became a favorite recreational activity among the Chinese diaspora.
+                    </p>
+
+                    <h4>The Equipment:</h4>
+                    <p>The main equipment in Chapteh is the shuttlecock itself. Traditionally, it is made by
+                        attaching
+                        feathers to a weighted rubber or metal base. The design ensures that when it's kicked, the
+                        shuttlecock will rotate, making the game more challenging and engaging.</p>
+
+                    <h4>Rules and Gameplay:</h4>
+                    <ul>
+                        <li>The primary objective of the game is to keep the Chapteh off the ground using feet,
+                            knees,
+                            shoulders, and the head. Players are not allowed to use their hands.</li>
+                        <li>Players can play solo, trying to achieve as many consecutive kicks as possible, or in
+                            groups
+                            where they pass the Chapteh to other players.</li>
+                        <li>In competitive versions, players stand in a circle, and the goal is to keep the Chapteh
+                            airborne. If a player fails to return the Chapteh or lets it drop, they are eliminated
+                            or
+                            lose a point.</li>
+                        <li>Other variations involve specific routines or sequences of kicks and tricks that players
+                            must execute.</li>
+                    </ul>
+
+                    <h4>Popularity:</h4>
+                    <p>Chapteh has been a beloved game among Chinese communities across Asia. In Malaysia, it is a
+                        nostalgic reminder of simpler times. Many older generations fondly recall playing Chapteh
+                        during
+                        school breaks or after school hours in open fields or backyards. Today, it is also played as
+                        a
+                        competitive sport in some regions, with players showcasing remarkable agility and dexterity.
+                    </p>
+
+                    <h4>Conclusion:</h4>
+                    <p>Chapteh remains a testament to the enduring appeal of traditional games. With its rich
+                        history
+                        and engaging gameplay, it continues to be a favorite pastime and cultural emblem for many in
+                        the
+                        Chinese community.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chess Modal -->
+    <div class="modal fade" id="chessModal" tabindex="-1" aria-labelledby="chessModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal-size">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="chessModalLabel">Chinese Chess (Xiangqi)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="settings-panel container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-6 col-md-3">
+                            <label>Font Size:</label>
+                        </div>
+                        <div class="col-6 col-md-3 text-center">
+                            <button class="decreaseFont btn btn-sm">-</button>
+                            <span class="currentFontSize mx-2">14</span>
+                            <button class="increaseFont btn btn-sm">+</button>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <label>Background Color:</label>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <select class="bgColorSelector form-control form-control-sm">
+                                <option value="white" class="white-bg">White</option>
+                                <option value="lightyellow" class="lightyellow-bg">Light Yellow</option>
+                                <option value="palegreen" class="palegreen-bg">Pale Green</option>
+                                <option value="lightpink" class="lightpink-bg">Light Pink</option>
+                                <option value="lightblue" class="lightblue-bg">Light Blue</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <button class="toggleDarkMode btn btn-sm btn-primary">Toggle Dark Mode</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/vklqOLf6mtU" frameborder="0"
+                        allowfullscreen></iframe>
+                    <h4>Introduction:</h4>
+                    <p>Chinese Chess, known as "Xiangqi" (象棋) in Mandarin, is a strategy board game for two players.
+                        It
+                        is one of the most popular board games in China and has a long-standing history deeply
+                        rooted in
+                        Chinese culture. Xiangqi is often referred to as the "elephant game" because the term
+                        "xiang"
+                        means "elephant" in Chinese, signifying the game's historical connection with ancient India,
+                        where the elephant is a symbol of warfare and strategy.</p>
+
+                    <h4>History:</h4>
+                    <p>Xiangqi's origins trace back to ancient China, with its earliest forms believed to have
+                        emerged
+                        during the Warring States period (475-221 BCE). Over the centuries, the game evolved, with
+                        standardized rules and gameplay established during the Tang Dynasty (618-907 AD). The game,
+                        as
+                        played today, has remained largely unchanged since the Song Dynasty (960-1279 AD).</p>
+
+                    <h4>The Board and Pieces:</h4>
+                    <p>The Xiangqi board consists of 10 horizontal lines (ranks) and 9 vertical lines (files). A
+                        river
+                        divides the board into two equal territories, representing the opposing sides. Each player
+                        has a
+                        set of 16 pieces: 1 General (or King), 2 Advisors, 2 Elephants, 2 Horses, 2 Chariots, 2
+                        Cannons,
+                        and 5 Soldiers (or Pawns). The pieces are placed on the intersections of the lines, unlike
+                        the
+                        squares in international chess.</p>
+
+                    <h4>Rules and Gameplay:</h4>
+                    <ul>
+                        <li>The objective is to checkmate the opponent's General. A player wins if they can place
+                            the
+                            enemy General in a position where it cannot avoid capture.</li>
+                        <li>Each type of piece moves differently:
+                            <ul>
+                                <li>The General moves one point vertically or horizontally but is confined to the
+                                    palace, a 3x3 area in the center of its territory.</li>
+                                <li>Advisors move diagonally within the palace.</li>
+                                <li>Elephants move two points diagonally but cannot cross the river.</li>
+                                <li>Horses move similarly to the knights in international chess but can be blocked.
+                                </li>
+                                <li>Chariots move vertically or horizontally across any distance.</li>
+                                <li>Cannons move like Chariots but capture by jumping over exactly one piece.</li>
+                                <li>Soldiers move and capture by advancing one point forward but can move
+                                    horizontally
+                                    after crossing the river.</li>
+                            </ul>
+                        </li>
+                        <li>Players alternate turns, moving one piece at a time.</li>
+                    </ul>
+
+                    <h4>Popularity:</h4>
+                    <p>Chinese Chess remains an integral part of Chinese culture and daily life. It is commonly
+                        played
+                        in parks, teahouses, and homes across China and in Chinese communities worldwide. The game
+                        not
+                        only offers intellectual stimulation but also serves as a social activity, fostering
+                        connections
+                        among players of all ages.</p>
+
+                    <h4>Conclusion:</h4>
+                    <p>Xiangqi, with its deep historical roots and strategic depth, remains one of the most beloved
+                        board games in the Chinese world. It is not just a game but a reflection of Chinese military
+                        strategy, history, and culture.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kabaddi Modal -->
+    <div class="modal fade" id="kabaddiModal" tabindex="-1" aria-labelledby="kabaddiModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal-size">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="kabaddiModalLabel">Kabaddi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="settings-panel container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-6 col-md-3">
+                            <label>Font Size:</label>
+                        </div>
+                        <div class="col-6 col-md-3 text-center">
+                            <button class="decreaseFont btn btn-sm">-</button>
+                            <span class="currentFontSize mx-2">14</span>
+                            <button class="increaseFont btn btn-sm">+</button>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <label>Background Color:</label>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <select class="bgColorSelector form-control form-control-sm">
+                                <option value="white" class="white-bg">White</option>
+                                <option value="lightyellow" class="lightyellow-bg">Light Yellow</option>
+                                <option value="palegreen" class="palegreen-bg">Pale Green</option>
+                                <option value="lightpink" class="lightpink-bg">Light Pink</option>
+                                <option value="lightblue" class="lightblue-bg">Light Blue</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <button class="toggleDarkMode btn btn-sm btn-primary">Toggle Dark Mode</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/ybdGREjvluU" frameborder="0"
+                        allowfullscreen></iframe>
+                    <h4>Introduction:</h4>
+                    <p>Kabaddi is a traditional Indian contact sport that requires strength, strategy, and agility.
+                        Rooted deeply in the cultural history of India, it is one of the oldest forms of indigenous
+                        games. Played between two teams, Kabaddi combines elements of wrestling and rugby but is
+                        uniquely distinctive in its rules and gameplay.</p>
+
+                    <h4>History:</h4>
+                    <p>The origins of Kabaddi can be traced back over 4,000 years to ancient India. It is believed
+                        to
+                        have been played by the Buddha himself for recreation. Over the years, the game has evolved
+                        and
+                        spread across different regions, each having its own variation of the rules. However, the
+                        core
+                        essence of the game remains consistent.</p>
+
+                    <h4>The Court:</h4>
+                    <p>A standard Kabaddi court is rectangular, measuring 13m x 10m for men and 11m x 8m for women.
+                        The
+                        court is divided into two halves, with each team occupying one half. There are also three
+                        horizontal lines drawn on each side: a baulk line, a bonus line, and a mid-line that divides
+                        the
+                        court into two.</p>
+
+                    <h4>Rules and Gameplay:</h4>
+                    <ul>
+                        <li>Each team consists of 7 players, with 5 additional players held in reserve for
+                            substitution.
+                        </li>
+                        <li>The game is played in two 20-minute halves with a 5-minute break in between.</li>
+                        <li>The main objective is for a single player (raider) from the attacking side to enter the
+                            opponent's half, tag as many defenders as possible, and return to their half without
+                            being
+                            tackled.</li>
+                        <li>The raider must chant "Kabaddi, Kabaddi" continuously without taking another breath,
+                            proving
+                            they're not inhaling during the raid.</li>
+                        <li>If the raider successfully returns without being tackled, the tagged defenders are out.
+                            If
+                            the defenders tackle the raider, the raider is out.</li>
+                        <li>Points are scored for each player tagged by the raider, for putting out the raider, and
+                            for
+                            boundary line violations.</li>
+                        <li>The team with the most points at the end of the match is declared the winner.</li>
+                    </ul>
+
+                    <h4>Popularity:</h4>
+                    <p>While Kabaddi has its roots in India, its popularity has soared internationally in recent
+                        years.
+                        The Pro Kabaddi League, introduced in India in 2014, played a significant role in
+                        modernizing
+                        the sport and making it globally recognized. Today, Kabaddi is not only played in India but
+                        also
+                        in countries like Bangladesh, Pakistan, Iran, and Korea, with international championships
+                        drawing teams from all over the world.</p>
+
+                    <h4>Conclusion:</h4>
+                    <p>Kabaddi, with its blend of strategy, strength, and skill, offers a captivating spectacle. It
+                        is a
+                        testament to India's rich sporting heritage and continues to be a beloved game, enjoyed by
+                        millions globally.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- gilli danda Modal -->
+    <div class="modal fade" id="gilliDandaModal" tabindex="-1" aria-labelledby="gilliDandaModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal-size">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="gillidandaModalLabel">Gilli Danda</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="settings-panel container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-6 col-md-3">
+                            <label>Font Size:</label>
+                        </div>
+                        <div class="col-6 col-md-3 text-center">
+                            <button class="decreaseFont btn btn-sm">-</button>
+                            <span class="currentFontSize mx-2">14</span>
+                            <button class="increaseFont btn btn-sm">+</button>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <label>Background Color:</label>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <select class="bgColorSelector form-control form-control-sm">
+                                <option value="white" class="white-bg">White</option>
+                                <option value="lightyellow" class="lightyellow-bg">Light Yellow</option>
+                                <option value="palegreen" class="palegreen-bg">Pale Green</option>
+                                <option value="lightpink" class="lightpink-bg">Light Pink</option>
+                                <option value="lightblue" class="lightblue-bg">Light Blue</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <button class="toggleDarkMode btn btn-sm btn-primary">Toggle Dark Mode</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/EhPS0JofmCk" frameborder="0"
+                        allowfullscreen></iframe>
+                    <h4>Introduction:</h4>
+                    <p>Gilli Danda is an ancient sport played in the rural areas of India and has been popular for
+                        centuries. It's a game of sticks, often regarded as the precursor to modern-day cricket and
+                        baseball. The game requires hand-eye coordination, precision, and timing.</p>
+
+                    <h4>History:</h4>
+                    <p>The origins of Gilli Danda are believed to date back more than 2500 years, making it one of
+                        the
+                        oldest known sports of the Indian subcontinent. References to the game can be found in
+                        ancient
+                        scriptures and works of literature. Over the years, the game has retained its traditional
+                        charm
+                        and is still prevalent in rural parts of India.</p>
+
+                    <h4>Equipment:</h4>
+                    <p>The game employs two main pieces of equipment: the 'Danda', a longer stick used to hit, and
+                        the
+                        'Gilli', a shorter stick that is struck by the Danda. Both sticks are typically made of
+                        wood.
+                    </p>
+
+                    <h4>Rules and Gameplay:</h4>
+                    <ul>
+                        <li>The game begins with the Gilli placed on the ground. One end of the Gilli is slightly
+                            elevated by pressing it down with the Danda.</li>
+                        <li>The player then uses the Danda to strike the elevated end of the Gilli, propelling it
+                            into
+                            the air.</li>
+                        <li>As the Gilli is airborne, the objective is to hit it again with the Danda, sending it as
+                            far
+                            as possible.</li>
+                        <li>The opposing players try to catch the Gilli. If the Gilli is caught, the hitter is out.
+                            If
+                            not, the distance the Gilli has traveled is measured using the length of the Danda.</li>
+                        <li>The player has to run and touch a pre-decided point outside the circle before the Gilli
+                            is
+                            retrieved by an opponent.</li>
+                        <li>The game is played in turns, and the player who sends the Gilli the farthest distance is
+                            declared the winner.</li>
+                    </ul>
+
+                    <h4>Popularity:</h4>
+                    <p>While urbanization and the influx of digital games have slightly diminished the popularity of
+                        Gilli Danda in cities, it remains a favorite pastime in many rural areas of India. The
+                        simplicity of the game, requiring minimal equipment, makes it accessible to everyone.
+                        Moreover,
+                        different regions in India have their variations and names for the game, such as "Tipcat" in
+                        English and "Chinni Dandu" in Kannada.</p>
+
+                    <h4>Conclusion:</h4>
+                    <p>Gilli Danda is more than just a game; it's a reflection of India's rich cultural heritage and
+                        its
+                        traditional sports. While it might seem simple, the skills and strategies employed make it a
+                        challenging and enjoyable sport.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pallanguli Modal -->
+    <div class="modal fade" id="pallanguliModal" tabindex="-1" aria-labelledby="pallanguliModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal-size">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pallanguliModalLabel">Pallanguli</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="settings-panel container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-6 col-md-3">
+                            <label>Font Size:</label>
+                        </div>
+                        <div class="col-6 col-md-3 text-center">
+                            <button class="decreaseFont btn btn-sm">-</button>
+                            <span class="currentFontSize mx-2">14</span>
+                            <button class="increaseFont btn btn-sm">+</button>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <label>Background Color:</label>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <select class="bgColorSelector form-control form-control-sm">
+                                <option value="white" class="white-bg">White</option>
+                                <option value="lightyellow" class="lightyellow-bg">Light Yellow</option>
+                                <option value="palegreen" class="palegreen-bg">Pale Green</option>
+                                <option value="lightpink" class="lightpink-bg">Light Pink</option>
+                                <option value="lightblue" class="lightblue-bg">Light Blue</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <button class="toggleDarkMode btn btn-sm btn-primary">Toggle Dark Mode</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/TJZpQgYCDpw" frameborder="0"
+                        allowfullscreen></iframe>
+                    <h4>Introduction:</h4>
+                    <p>Pallanguli, also known as Pallankuzhi, is a traditional Indian mancala game played
+                        predominantly
+                        in the southern parts of India, especially in Tamil Nadu. It's a game of strategy and skill,
+                        played with small shells or tamarind seeds, and requires mathematical and analytical
+                        thinking.
+                    </p>
+
+                    <h4>History:</h4>
+                    <p>The origins of Pallanguli trace back to ancient India, with references found in traditional
+                        Tamil
+                        literature. The game has not only been a source of entertainment but also an integral part
+                        of
+                        Tamil culture, symbolizing prosperity and fertility. Over the years, the game has been
+                        passed
+                        down through generations, preserving its essence.</p>
+
+                    <h4>Equipment:</h4>
+                    <p>The game is played on a rectangular wooden board with two rows of seven pits each. Players
+                        use
+                        small shells, tamarind seeds, or small stones as counters.</p>
+
+                    <h4>Rules and Gameplay:</h4>
+                    <ul>
+                        <li>The game is played by two players, each owning one row of the board.</li>
+                        <li>Each pit starts with an equal number of counters, commonly six or seven.</li>
+                        <li>A player begins their turn by picking all the counters from one of their pits and sowing
+                            them one by one into the succeeding pits in a counter-clockwise direction.</li>
+                        <li>If the last counter lands in a pit containing three or two counters, making the total
+                            either
+                            three or four, the player captures these counters.</li>
+                        <li>The turn ends when the last counter of a player's hand is placed in an empty pit or a
+                            pit on
+                            the opponent's side.</li>
+                        <li>The game continues until one of the players cannot make a move. At this point, the other
+                            player captures all the remaining counters.</li>
+                        <li>The player with the most counters at the end of the game is declared the winner.</li>
+                    </ul>
+
+                    <h4>Popularity:</h4>
+                    <p>Although Pallanguli is primarily associated with Tamil culture, variations of the game are
+                        played
+                        across India and other parts of Asia and Africa. The game is especially popular during
+                        festivals
+                        and is often played by women in the evenings. Its strategic nature combined with its
+                        cultural
+                        significance makes it a cherished pastime.</p>
+
+                    <h4>Conclusion:</h4>
+                    <p>Pallanguli is a testament to the rich and diverse heritage of traditional Indian games.
+                        Beyond
+                        its recreational value, the game also imparts valuable skills like strategic thinking and
+                        planning. Its enduring popularity is a testament to its timeless appeal.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- seven stones Modal -->
+    <div class="modal fade" id="sevenStonesModal" tabindex="-1" aria-labelledby="sevenStonesModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal-size">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sevenstonesModalLabel">Seven Stones</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="settings-panel container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-6 col-md-3">
+                            <label>Font Size:</label>
+                        </div>
+                        <div class="col-6 col-md-3 text-center">
+                            <button class="decreaseFont btn btn-sm">-</button>
+                            <span class="currentFontSize mx-2">14</span>
+                            <button class="increaseFont btn btn-sm">+</button>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <label>Background Color:</label>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <select class="bgColorSelector form-control form-control-sm">
+                                <option value="white" class="white-bg">White</option>
+                                <option value="lightyellow" class="lightyellow-bg">Light Yellow</option>
+                                <option value="palegreen" class="palegreen-bg">Pale Green</option>
+                                <option value="lightpink" class="lightpink-bg">Light Pink</option>
+                                <option value="lightblue" class="lightblue-bg">Light Blue</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <button class="toggleDarkMode btn btn-sm btn-primary">Toggle Dark Mode</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/oq_3DNyD1IA" frameborder="0"
+                        allowfullscreen></iframe>
+
+                    <h4>Introduction:</h4>
+                    <p>Seven Stones, commonly known as Satoliya or Lagori in various parts of India, is a
+                        traditional
+                        Indian game. It involves a ball and a set of seven flat stones stacked on top of each other.
+                        The
+                        game is known for its simple equipment but demands good hand-eye coordination, team
+                        cooperation,
+                        and strategy.</p>
+
+                    <h4>History:</h4>
+                    <p>The origins of Seven Stones can be traced back to ancient India. Over the years, the game has
+                        remained popular in various parts of the country, especially in rural areas. Passed down
+                        through
+                        generations, Satoliya has been a favorite pastime for children and adults alike.</p>
+
+                    <h4>Equipment:</h4>
+                    <p>The primary equipment required is a soft ball and a set of seven flat stones. The stones are
+                        usually of medium size and are stacked on top of each other to form a tower.</p>
+
+                    <h4>Rules and Gameplay:</h4>
+                    <ul>
+                        <li>The game is played between two teams with an equal number of players.</li>
+                        <li>The team that starts has the responsibility of hitting the stone tower with the ball,
+                            aiming
+                            to scatter the stones.</li>
+                        <li>Once the tower is hit and the stones are scattered, the same team tries to restore the
+                            pile
+                            of stones while the opposing team tries to hit the players of the first team with the
+                            ball.
+                        </li>
+                        <li>If a player from the first team is hit by the ball, they are out and cannot participate
+                            further in that round.</li>
+                        <li>If the team restoring the stones successfully rebuilds the tower without all its members
+                            getting out, they score a point and get another chance to hit the tower. Otherwise, the
+                            opposing team gets the chance to hit the tower.</li>
+                        <li>The game continues in this manner, and the team with the most points at the end wins.
+                        </li>
+                    </ul>
+
+                    <h4>Popularity:</h4>
+                    <p>Seven Stones is widely played across India, with slight variations in rules from one region
+                        to
+                        another. While its popularity has waned in urban areas due to modern entertainment means and
+                        lack of open spaces, it remains a beloved game in rural settings. Festivals and communal
+                        gatherings often witness enthusiastic rounds of Satoliya, reflecting its deep-rooted
+                        presence in
+                        Indian culture.</p>
+
+                    <h4>Conclusion:</h4>
+                    <p>Seven Stones or Satoliya is a game that encapsulates the essence of traditional Indian
+                        outdoor
+                        games – simple in design yet rich in strategy and team spirit. Its continued popularity in
+                        various parts of the country signifies its timeless appeal and cultural significance.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bamboodance Modal -->
+    <div class="modal fade" id="bambooDanceModal" tabindex="-1" aria-labelledby="bambooDanceModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal-size">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="BamboodanceModalLabel">Bamboodance</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="settings-panel container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-6 col-md-3">
+                            <label>Font Size:</label>
+                        </div>
+                        <div class="col-6 col-md-3 text-center">
+                            <button class="decreaseFont btn btn-sm">-</button>
+                            <span class="currentFontSize mx-2">14</span>
+                            <button class="increaseFont btn btn-sm">+</button>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <label>Background Color:</label>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <select class="bgColorSelector form-control form-control-sm">
+                                <option value="white" class="white-bg">White</option>
+                                <option value="lightyellow" class="lightyellow-bg">Light Yellow</option>
+                                <option value="palegreen" class="palegreen-bg">Pale Green</option>
+                                <option value="lightpink" class="lightpink-bg">Light Pink</option>
+                                <option value="lightblue" class="lightblue-bg">Light Blue</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <button class="toggleDarkMode btn btn-sm btn-primary">Toggle Dark Mode</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/dtDlPrWAivE" frameborder="0"
+                        allowfullscreen></iframe>
+                    <h4>Introduction:</h4>
+                    <p>The Bamboo Dance, locally known as "Maglalatik" or "Tinikling", is a traditional dance and
+                        game
+                        originating from the indigenous communities of Malaysia. It is not only a display of
+                        rhythmic
+                        agility but also a vibrant representation of the local culture. The dance is characterized
+                        by
+                        the beating of bamboo poles, opened and closed in rhythm, while dancers skillfully navigate
+                        over
+                        and between the poles.</p>
+
+                    <h4>History:</h4>
+                    <p>The origins of the Bamboo Dance are deeply rooted in the indigenous traditions of Malaysia.
+                        The
+                        dance is believed to mimic the movements of a bird navigating through tall grass or bamboo
+                        traps
+                        set by farmers. Over time, it has evolved to become a popular cultural performance,
+                        especially
+                        during festivals and communal celebrations.</p>
+
+                    <h4>Equipment:</h4>
+                    <p>The primary equipment for the Bamboo Dance consists of two long bamboo poles. These poles are
+                        held by participants on either end and are clapped together in rhythm, creating the primary
+                        challenge for the dancers.</p>
+
+                    <h4>Rules and Gameplay:</h4>
+                    <ul>
+                        <li>The dance involves a pair of dancers (often a male and a female) dancing between two
+                            bamboo
+                            poles.</li>
+                        <li>Two or more participants hold the bamboo poles, clapping them together in rhythm. The
+                            poles
+                            are beaten against the ground and then against each other, producing a sharp sound.</li>
+                        <li>Dancers must dance between the poles, ensuring their feet are not caught as the poles
+                            come
+                            together.</li>
+                        <li>The dance gets progressively faster, demanding swift footwork and precise timing from
+                            the
+                            dancers.</li>
+                        <li>Typically, the dance is accompanied by traditional music, adding to the festive
+                            atmosphere.
+                        </li>
+                    </ul>
+
+                    <h4>Popularity:</h4>
+                    <p>While the Bamboo Dance is traditionally associated with the indigenous communities of
+                        Malaysia,
+                        its appeal has transcended ethnic boundaries. Today, it is performed at various cultural
+                        events,
+                        schools, and festivals across Malaysia. The dance has also gained recognition
+                        internationally,
+                        with many Southeast Asian countries having their variations of the dance.</p>
+
+                    <h4>Conclusion:</h4>
+                    <p>The Bamboo Dance is a testament to the rich cultural tapestry of Malaysia. It encapsulates
+                        the
+                        spirit, rhythm, and dynamism of the indigenous communities. Beyond being just a dance, it's
+                        a
+                        celebration of coordination, teamwork, and the vibrant traditions of the Malaysian people.
+                    </p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sumpit Modal -->
+    <div class="modal fade" id="sumpitModal" tabindex="-1" aria-labelledby="sumpitModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal-size">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sumpitModalLabel">Sumpit</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="settings-panel container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-6 col-md-3">
+                            <label>Font Size:</label>
+                        </div>
+                        <div class="col-6 col-md-3 text-center">
+                            <button class="decreaseFont btn btn-sm">-</button>
+                            <span class="currentFontSize mx-2">14</span>
+                            <button class="increaseFont btn btn-sm">+</button>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <label>Background Color:</label>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <select class="bgColorSelector form-control form-control-sm">
+                                <option value="white" class="white-bg">White</option>
+                                <option value="lightyellow" class="lightyellow-bg">Light Yellow</option>
+                                <option value="palegreen" class="palegreen-bg">Pale Green</option>
+                                <option value="lightpink" class="lightpink-bg">Light Pink</option>
+                                <option value="lightblue" class="lightblue-bg">Light Blue</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <button class="toggleDarkMode btn btn-sm btn-primary">Toggle Dark Mode</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/_oO7u9gv4_E" frameborder="0"
+                        allowfullscreen></iframe>
+
+                    <h4>Introduction:</h4>
+                    <p>Sumpit, also known as the blowpipe game, is a traditional game that traces its origins to the
+                        indigenous communities of Malaysia. Historically, the blowpipe was a hunting tool used by
+                        these
+                        communities. Over time, its use in cultural festivities and competitions transformed it into
+                        a
+                        game, showcasing precision and skill.</p>
+
+                    <h4>History:</h4>
+                    <p>The sumpit has been a part of the indigenous peoples' arsenal for centuries, primarily
+                        serving as
+                        a hunting weapon. The darts, often poisoned, were used to hunt small game from a distance.
+                        With
+                        the passage of time, the indigenous communities started organizing competitions to showcase
+                        their prowess with the blowpipe, leading to the birth of the sumpit game.</p>
+
+                    <h4>Equipment:</h4>
+                    <p>The main equipment for Sumpit includes the blowpipe, traditionally made from bamboo, and
+                        darts,
+                        which can be made from various materials, including wood. In the game setting, the darts are
+                        not
+                        poisoned, and safety measures are in place to prevent injuries.</p>
+
+                    <h4>Rules and Gameplay:</h4>
+                    <ul>
+                        <li>Participants take turns blowing darts from the sumpit aiming at a target, usually set at
+                            varying distances.</li>
+                        <li>The target can be a piece of wood, fruit, or any other object deemed suitable for the
+                            competition.</li>
+                        <li>Points are awarded based on the accuracy of the shot and where the dart lands on the
+                            target.
+                        </li>
+                        <li>The participant with the highest accumulated points after a set number of rounds emerges
+                            as
+                            the winner.</li>
+                        <li>Safety precautions are crucial. Spectators and other participants must stand clear of
+                            the
+                            firing line, and the game must be played in a controlled environment.</li>
+                    </ul>
+
+                    <h4>Popularity:</h4>
+                    <p>While Sumpit is traditionally associated with the indigenous communities of Malaysia, it has
+                        garnered interest from other ethnic groups in the country. It is often featured in cultural
+                        exhibitions and festivals, providing both locals and tourists an insight into the rich
+                        traditions of the indigenous communities. Furthermore, it has become a competitive sport in
+                        certain regions, with championships held to determine the best sumpit practitioners.</p>
+
+                    <h4>Conclusion:</h4>
+                    <p>Sumpit is more than just a game; it's a bridge to the past, connecting the present generation
+                        to
+                        the rich history and traditions of Malaysia's indigenous communities. It showcases not only
+                        skill and precision but also the cultural heritage and the enduring spirit of the native
+                        peoples
+                        of Malaysia.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- sepak manggis Modal -->
+    <div class="modal fade" id="sepakManggisModal" tabindex="-1" aria-labelledby="sepakManggisModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal-size">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sepakmanggisModalLabel">Sepak Manggis</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="settings-panel container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-6 col-md-3">
+                            <label>Font Size:</label>
+                        </div>
+                        <div class="col-6 col-md-3 text-center">
+                            <button class="decreaseFont btn btn-sm">-</button>
+                            <span class="currentFontSize mx-2">14</span>
+                            <button class="increaseFont btn btn-sm">+</button>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <label>Background Color:</label>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <select class="bgColorSelector form-control form-control-sm">
+                                <option value="white" class="white-bg">White</option>
+                                <option value="lightyellow" class="lightyellow-bg">Light Yellow</option>
+                                <option value="palegreen" class="palegreen-bg">Pale Green</option>
+                                <option value="lightpink" class="lightpink-bg">Light Pink</option>
+                                <option value="lightblue" class="lightblue-bg">Light Blue</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <button class="toggleDarkMode btn btn-sm btn-primary">Toggle Dark Mode</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/DvanpUgfWzk" frameborder="0"
+                        allowfullscreen></iframe>
+
+                    <h4>Introduction:</h4>
+                    <p>Sepak Manggis, also known as "Mangosteen Kick," is a traditional game originating from the
+                        indigenous communities of Malaysia. It is an outdoor group game that revolves around the
+                        mangosteen fruit, a popular tropical fruit in Southeast Asia. The game tests the agility,
+                        alertness, and physical prowess of its participants.</p>
+
+                    <h4>History:</h4>
+                    <p>The origins of Sepak Manggis are deeply rooted in the customs and celebrations of Malaysia's
+                        indigenous tribes. Historically, the game was played during festive seasons and communal
+                        gatherings. It provided entertainment and fostered camaraderie among the villagers. Over the
+                        years, its popularity spread, and it became an integral part of cultural festivities in
+                        various
+                        parts of Malaysia.</p>
+
+                    <h4>Equipment:</h4>
+                    <p>The main equipment required for Sepak Manggis is the mangosteen fruit. Traditionally, a ripe
+                        mangosteen was used, but in modern variations, substitutes or specially made balls
+                        resembling
+                        the fruit might be used to avoid wastage and mess.</p>
+
+                    <h4>Rules and Gameplay:</h4>
+                    <ul>
+                        <li>The game begins with one player, known as the "attacker," holding the mangosteen while
+                            others form a circle around this player.</li>
+                        <li>The attacker tosses the mangosteen high into the air. As it falls, the members of the
+                            circle
+                            try to catch it. The person who catches it becomes the new attacker.</li>
+                        <li>The objective for the circle members is to catch the mangosteen, while the attacker's
+                            goal
+                            is to prevent them from doing so using permissible physical interventions.</li>
+                        <li>If the mangosteen touches the ground without anyone catching it, the last attacker will
+                            face
+                            a "punishment" where they stand in the middle of the circle while others get a free
+                            chance
+                            to throw the mangosteen at them, albeit without causing harm.</li>
+                        <li>The game is played in rounds, and there is no strict scoring system. The emphasis is on
+                            fun,
+                            agility, and interaction among participants.</li>
+                    </ul>
+
+                    <h4>Popularity:</h4>
+                    <p>While Sepak Manggis originated from the indigenous communities, its playful nature has
+                        attracted
+                        participants from various ethnic backgrounds in Malaysia. Schools, local communities, and
+                        cultural festivals often include Sepak Manggis as part of their recreational activities. The
+                        game not only offers entertainment but also promotes physical activity and interaction among
+                        players.</p>
+
+                    <h4>Conclusion:</h4>
+                    <p>Sepak Manggis is a testament to the rich cultural heritage of Malaysia's indigenous
+                        communities.
+                        It epitomizes the joy of simple games, the spirit of togetherness, and the importance of
+                        traditions passed down through generations. Its playful and interactive nature makes it a
+                        favorite among both the young and old, preserving its legacy in the modern era.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container pt-5 border-bottom">
+        <div class="row">
+            <!-- Logo section -->
+            <div class="col-md-3 col-sm-12 footer-logo">
+                <img src="https://drive.google.com/uc?export=view&id=1fnumiE0X4BoO9uZy0iPUOlKfKoxrwrEh"
+                    alt="Website Logo" class="logo-image">
+                <p class="logo-description">"Malaysia: A vibrant blend of Malay, Chinese, Indian, and indigenous
+                    cultures, celebrated through festivals, cuisine, and landmarks."</p>
+            </div>
+
+            <!-- Quick Links section -->
+            <div class="col-md-3 col-sm-12 footer-section">
+                <h4>Quick Links</h4>
+                <a href="home.html" class="footer-link">Home</a>
+                <a href="food.html" class="footer-link">Foods</a>
+                <a href="Malaysia Festival.html" class="footer-link">Festivals</a>
+                <a href="game.html" class="footer-link">Games</a>
+            </div>
+
+            <!-- Contact section -->
+            <div class="col-md-3 col-sm-12 footer-section">
+                <h4>Contact Us</h4>
+                <p class="footer-contact">
+                    <strong>Email:</strong> chaizhenjie@1utar.my<br>
+                    <br>
+                    <strong>Phone:</strong>+6011-10869579
+                </p>
+            </div>
+            <!-- Social Links section -->
+            <div class="col-md-3 col-sm-12 footer-section">
+                <h4>Other</h4>
+                <a href="aboutus.html" class="footer-link">About</a>
+                <a href="contact.html" class="footer-link">Contact Us</a>
+                <br>
+                <br>
+
+            </div>
+        </div>
+    </div>
+        
+</footer>
+
+
+
+<!-- jQuery (full version) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap 5 JS Bundle with Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>document.querySelector('.navbar-toggler').addEventListener('click', function () {
+        var icon = document.querySelector('.navbar-toggler-icon');
+        if (icon.classList.contains('clicked')) {
+            icon.classList.remove('clicked');
+        } else {
+            icon.classList.add('clicked');
+        }
+    });
+</script>
+<script>
+    function setCookie(name, value, days) {
+        let date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        let expires = "expires=" + date.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
+
+    function getCookie(name) {
+        let nameEQ = name + "=";
+        let ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    function displayGames() {
+        const games = {
+            malay: `
+                <div class="game-description">
+                <img src='https://drive.google.com/uc?export=view&id=1ykB6ybN6Sw0Rtlrd6tIDVkLXe_9YZDU6' alt='Sepak Takraw Image' class="gameImage img-fluid"  data-bs-toggle="modal" data-bs-target="#sepakTakrawModal"/>
+                <h4>Sepak Takraw</h4>
+                <p>This is a game where two teams of players use their feet, heads, knees, and backs to pass a ball made of rattan to the opposing side. The goal is to get the ball to land on the opponent's side of the court.</p>
+                </div>
+                <br>
+                <div class="game-description">
+                <img src='https://drive.google.com/uc?export=view&id=11YiL_fseZnz7RGnH1j41Llp-7CFFKAu9' alt='Congkak Image' class="gameImage img-fluid"  data-bs-toggle="modal" data-bs-target="#CongkakModal"/>
+                <h4>Congkak</h4>
+                <p>A strategy game where players move small stones or shells around a wooden or stone game board.</p>
+                </div>
+                <br>
+                <div class="game-description">
+                <img src='https://drive.google.com/uc?export=view&id=1KPmHrvGmJv_ZMMi_r7F7k1GBWpXnqnaq' alt='Batting Top Image' class="gameImage img-fluid"  data-bs-toggle="modal" data-bs-target="#GasingModal"/>
+                <h4>Batting Top (Gasing)</h4>
+                <p>Large tops, often made of wood, are spun using a rope. The objective is to have your top spin the longest.</p>
+                </div>  
+                <br>
+                <div class="game-description">
+                <img src='https://drive.google.com/uc?export=view&id=1Dfsj2MCNpy0d5t2oqb1oqu-XYwsq1DTy' alt='Wau Image' class="gameImage img-fluid"  data-bs-toggle="modal" data-bs-target="#WauModal"/>
+                <h4>Wau (Kite Flying)</h4>
+                <p>Intricately designed kites are flown, and sometimes there are competitions based on the kite's design and its flying capabilities.</p>
+                </div>
+                <br>
+                `,
+            chinese: `
+                <div class="game-description">
+                <img src='https://drive.google.com/uc?export=view&id=1E99jsNGO_p8-3YibP-VVT8dPBR9yQeFV' alt='Five Stones Image' class="gameImage img-fluid"  data-bs-toggle="modal" data-bs-target="#fivestonesModal"/>
+                <h4>Five Stones</h4>
+                <p>Players toss five small stones into the air and aim to catch them on the back of their hand before they fall to the ground.</p>
+               </div>
+                <br>
+                <div class="game-description">
+                <img src='https://drive.google.com/uc?export=view&id=1IaKjtK0E-ZIoaYPuTDn27FY6sCtx6bWG' alt='Hopscotch Image' class="gameImage img-fluid"  data-bs-toggle="modal" data-bs-target="#hopscothModal"/>
+                <h4>Hopscotch</h4>
+                <p>Players draw a pattern on the ground and then hop over different sections using a small stone or other marker.</p>
+                </div>
+                <br>
+                <div class="game-description">
+                <img src='https://drive.google.com/uc?export=view&id=1uT0txBeeWcRQXT9Ax5KT7Z0RhwmwA4sn' alt='Chapteh Image' class="gameImage img-fluid"  data-bs-toggle="modal" data-bs-target="#chaptehModal"/>
+                <h4>Chapteh</h4>
+                <p>A game where players juggle a feathered shuttlecock using their feet. The objective is to keep it airborne as long as possible.</p>
+                </div>
+                <br>
+                <div class="game-description">
+                <img src='https://drive.google.com/uc?export=view&id=1Q1v26pFXSBze8DfMUklPAN_xHDRr5-E0' alt='Chinese Chess Image' class="gameImage img-fluid"  data-bs-toggle="modal" data-bs-target="#chessModal"/>
+                <h4>Chinese Chess (Xiangqi)</h4>
+                <p>A strategic board game similar to international chess but with different pieces, movements, and board design.</p>
+                </div>
+                <br>
+                `,
+
+            indian: `
+                <div class="game-description">
+                <img src='https://drive.google.com/uc?export=view&id=15iP1p8TeAogbIa2v2ZlMMoSzP8v7zso2' alt='Kabaddi Image' class="gameImage img-fluid"  data-bs-toggle="modal" data-bs-target="#kabaddiModal"/>
+                <h4>Kabaddi</h4>
+                <p>A team game where players try to touch members of the opposing team without getting caught.</p>
+                </div>
+                <br>
+                <div class="game-description">
+                <img src='https://drive.google.com/uc?export=view&id=1HwSztGrSPDZv_Gnr8TCnLg_sxK4NsepW' alt='Gilli Danda Image' class="gameImage img-fluid"  data-bs-toggle="modal" data-bs-target="#gilliDandaModal"/>
+                <h4>Gilli Danda</h4>
+                <p>Players use a stick to hit another stick, and then try to hit it again as it's airborne with the first stick.</p>
+                </div>
+                <br>
+                <div class="game-description">
+                <img src='https://drive.google.com/uc?export=view&id=1optjvQKWBJwR4GHCeQBvOk9QnAY-o-mK' alt='Pallanguli Image' class="gameImage img-fluid"  data-bs-toggle="modal" data-bs-target="#pallanguliModal"/>
+                <h4>Pallanguli</h4>
+                <p>A traditional mancala game similar to Congkak but with a different board design and rules.</p>
+                </div>
+                <br>
+                <div class="game-description">
+                <img src='https://drive.google.com/uc?export=view&id=12a4-QbnrRP75v9Wp9QAZCQM62aTie6s0' alt='Seven Stones Image' class="gameImage img-fluid"  data-bs-toggle="modal" data-bs-target="#sevenStonesModal"/>
+                <h4>Seven Stones (Satoliya)</h4>
+                <p>Players stack seven flat stones on top of each other. One player throws a ball into the air and tries to dismantle the stack and then restore it before catching the ball.</p>
+                </div>
+                <br>
+                `,
+
+            indigenous: `
+                <div class="game-description">
+                <img src='https://drive.google.com/uc?export=view&id=1pYF8FywmMe4Vw1qRdmhfi6hEvjRvdr50' alt='Bamboo dance Image' class="gameImage img-fluid"  data-bs-toggle="modal" data-bs-target="#bambooDanceModal"/>
+                <h4>Bamboo dance</h4>
+                <p>Participants dance between two crossed bamboo poles that move in a specific rhythm.</p>
+                </div>
+                <br>
+                <div class="game-description">
+                <img src='https://drive.google.com/uc?export=view&id=1gZkBeFkaPG-6QxWPTRBntaMN2934VozT' alt='Sumpit Image' class="gameImage img-fluid"  data-bs-toggle="modal" data-bs-target="#sumpitModal"/>
+                <h4>Sumpit</h4>
+                <p>A game of skill using a blowpipe to shoot darts. Although not strictly a game, blowpiping is a tradition amongst indigenous communities for hunting animals.</p>
+                </div>
+                <br>
+                <div class="game-description">
+                <img src='https://drive.google.com/uc?export=view&id=1ZGQybf2FtkXJ012-h5-rHUmoaqYxsK3d' alt='Sepak Manggis Image' class="gameImage img-fluid"  data-bs-toggle="modal" data-bs-target="#sepakManggisModal"/>
+                <h4>Sepak Manggis</h4>
+                <p>"Sepak Manggis" is a traditional game of the Bajau and Iranun in Sabah, Malaysia. Players aim to hit a floral arrangement on a 10-meter pole. The winner receives prizes from within the arrangement.</p>
+                </div>
+                <br>
+                `
+        };
+
+        let selectedValue = document.getElementById('gameSelect').value;
+        if (document.getElementById('gamesDisplay').classList.contains('show')) {
+            document.getElementById('gamesDisplay').classList.remove('show');
+
+
+            setTimeout(() => {
+                if (games[selectedValue]) {
+                    document.getElementById('gamesDisplay').innerHTML = games[selectedValue];
+                    document.getElementById('gamesDisplay').style.display = 'block';
+                    setTimeout(() => {
+                        document.getElementById('gamesDisplay').classList.add('show');
+                    }, 50);
+                } else {
+                    document.getElementById('gamesDisplay').style.display = 'none';
+                }
+            }, 1000);
+        } else {
+            if (games[selectedValue]) {
+                document.getElementById('gamesDisplay').innerHTML = games[selectedValue];
+                document.getElementById('gamesDisplay').style.display = 'block';
+                setTimeout(() => {
+                    document.getElementById('gamesDisplay').classList.add('show');
+                }, 50);
+            } else {
+                document.getElementById('gamesDisplay').style.display = 'none';
+            }
+        }
+
+
+        setCookie("selectedEthnicGroup", selectedValue, 30);
+    }
+
+    window.onload = function () {
+        // Check if the tip has been shown before
+        // Check if the tip has been shown before
+        if (!sessionStorage.getItem('imageTipShown')) {
+            // Display the tip
+            document.getElementById('imageTip').style.display = 'block';
+
+            // Add an event listener to the close button
+            document.getElementById('closeTip').addEventListener('click', function () {
+                document.getElementById('imageTip').style.display = 'none';
+                // Set a flag in sessionStorage so the tip won't be shown again during this session
+                sessionStorage.setItem('imageTipShown', 'true');
+            });
+        }
+        let selectedGroup = getCookie("selectedEthnicGroup");
+        if (selectedGroup && selectedGroup !== "none") {
+            document.getElementById("gameSelect").value = selectedGroup;
+            displayGames();
+        }
+
+        const savedPreference = localStorage.getItem('userFontSizePreference');
+
+        if (savedPreference) {
+            document.getElementById('fontSizePreference').value = savedPreference;
+            applyFontSizePreference(savedPreference);
+        }
+
+    }
+
+    // This function updates the font size based on the user's preference
+    function updateFontSizePreference() {
+        const selectedSize = document.getElementById('fontSizePreference').value;
+
+        // Save the preference to localStorage
+        localStorage.setItem('userFontSizePreference', selectedSize);
+
+        // Apply the preference immediately
+        applyFontSizePreference(selectedSize);
+    }
+
+    function applyFontSizePreference(size) {
+        const body = document.querySelector('body');
+
+        switch (size) {
+            case 'small':
+                body.style.fontSize = '12px';
+                break;
+            case 'medium':
+                body.style.fontSize = '16px';
+                break;
+            case 'large':
+                body.style.fontSize = '20px';
+                break;
+            default:
+                body.style.fontSize = 'inherit';
+                break;
+        }
+    }
+</script>
+<script>
+
+    $(document).ready(function () {
+        let currentFontSize = 14;
+
+
+        $(".increaseFont").click(function () {
+            let currentSize = parseInt($(this).closest('.settings-panel').find('.currentFontSize').text());
+            currentSize += 1;
+            $(this).closest('.modal-content').find('.modal-body').css("font-size", currentSize + "px");
+            $(this).closest('.settings-panel').find('.currentFontSize').text(currentSize);
+        });
+        $(".decreaseFont").click(function () {
+
+            let currentSize = parseInt($(this).siblings('.currentFontSize').text());
+            currentSize -= 1;
+            $(this).closest('.modal-content').find('.modal-body').css("font-size", currentSize + "px");
+            $(this).siblings('.currentFontSize').text(currentSize);
+        });
+
+
+        $(".bgColorSelector").change(function (event) {
+            const selectedColor = $(this).val();
+            $(this).closest('.modal-content').find('.modal-body').css("background-color", selectedColor);
+        });
+
+        $(".toggleDarkMode").click(function () {
+            const currentBgColor = $(this).closest('.modal-content').find('.modal-body').css("background-color");
+
+
+            if (currentBgColor === "rgb(0, 0, 0)") {
+                $(this).closest('.modal-content').find('.modal-body').css({
+                    "background-color": "white",
+                    "color": "black"
+                });
+            } else {
+                $(this).closest('.modal-content').find('.modal-body').css({
+                    "background-color": "black",
+                    "color": "white"
+                });
+            }
+        });
+
+    });
+
+    const whatsappShare = document.getElementById('whatsappShare');
+    const currentUrl = encodeURIComponent(window.location.href);
+    const shareText = "Check out this website! ";
+    whatsappShare.href = `https://api.whatsapp.com/send?text=${shareText}${currentUrl}`;
+
+</script>
+</body>
+
+</html>
